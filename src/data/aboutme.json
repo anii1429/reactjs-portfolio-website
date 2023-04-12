@@ -1,0 +1,42 @@
+{
+    "Personal_info":{
+        "name":"anil chauhan",
+        "phone_no":"+91 7046844243",
+        "age":"22",
+        "birthdate":"14/03/2001",
+        "email":"anilc7089@gmail.com",
+        "city_country":" Ahmedabad, India",
+        "gender":"Male"
+    },
+    "Social":[
+        {
+        "name":"instagram",
+         "url" :"https://www.instagram.com/anilchauhan.29/"
+        },
+        {
+        "name":"facebook",
+        "url" :"https://www.facebook.com/anilchauhan1403/"
+        },
+        {
+         "name":"linkedIn",
+         "url" :"https://www.linkedin.com/in/anil-chauhan-9a748116b/"
+        },
+        {
+        "name":"github",
+        "url" :"https://github.com/anii1429"
+        }
+        
+    ],
+    "education":[
+        {
+            "year":"2018-2022",
+            "field_of_study":"BE – Information Technology",
+            "institute":"Aditya Silver Oak Institute of Technology"
+        },
+        {
+            "year":"2016-2018 ",
+            "field_of_study":"Science Stream",
+            "institute":"K R Raval School of Science"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+[
+    {
+        "img":"",
+        "title":"vendx-slab module",
+        "description":"In this module, the user was to provide some input range, and at least two slabs and a maximum of thirty could be added. and the beginning of the second slab must be 1 plus the ending of the previous slab. This entire slab was related to a specific item, and itmes were rendered in the table. Each item has its own slab.",
+        "technologies":"ReactJS, HTML, CSS, JavaScript, Git,redux,material ui",
+        "duration":"27 march 2023-04 april 2023"
+    },
+    {
+        "img":"",
+        "title":"vendx-authentication-workflow module",
+        "description":"This is a webpack-created react package, and its build file is used in a standard cdn file. The APIs are maintained on the consumer side. The change in the package file is applied to the outside of the package by using state uplifitng and props drilling. Snack bar is in the package file and is triggered from the user side when any action is taken.",
+        "technologies":"ReactJS, HTML, CSS, JavaScript,npm,webpack Git,material ui",
+        "duration":"1 november 2022 - 9 february 2023"
+    },
+    {
+        "img":"",
+        "title":"Cloud-kida",
+        "description":"Cloud Kida is a platform that provides users with a virtual lab in which to complete their tasks. There are three user roles in this app, and each user has their own roles-based data. As a result, protected routes are used for rendering user-base data.",
+        "technologies":"ReactJS, HTML, CSS, JavaScript, Git,redux,material ui",
+        "duration":"1 august 2022 -  30 august 2022"
+    }
+]

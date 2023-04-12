@@ -1,0 +1,20 @@
+[
+    {
+        "img":"",
+        "title":"Color-palette-app",
+        "description":"Developed a Color Palette App using React JS, Material UI, and React Router.Implemented custom color palette creation with the option to adjust brightness and saturation.The app also includes features like sorting colors in  palettes by drag and drop color.",
+        "technologies":"ReactJS, Router,Mui, HTML, CSS, JavaScript, Git"
+    },
+    {
+        "img":"",
+        "title":"React-notes-app",
+        "description":"As a developer, I created a note-taking web application with React JS and CKEditor. The React Notes App provides a simple interface for users to create, edit, and save notes. The use of CKEditor enables rich text editing capabilities such as formatting text and creating lists. Overall, the React Notes App is a reliable and efficient tool for users to organize their thoughts and ideas.",
+        "technologies":"ReactJS, HTML, CSS, JavaScript, Git"
+    },
+    {
+        "img":"",
+        "title":"News app",
+        "description":"The news app is built with React and a real-time news API, allowing users to get the latest news quickly and efficiently. Users can easily navigate through the app and customize their news feed by selecting categories of interest thanks to a simple and user-friendly interface.",
+        "technologies":"ReactJS,, HTML, CSS, JavaScript, Git"
+    }
+]
