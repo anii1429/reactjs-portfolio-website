@@ -5,7 +5,7 @@ const projectdata = require("../data/projects.json")
 
 const Projects = () => {
   return (
-      <div>
+      <div sx={{mx: 'auto', mt: 8}}>
             <Grid sx={{ flexGrow: 1 }} container spacing={2}>
              <Grid item xs={12}>
                <Grid container justifyContent="center" alignItems={"center"} spacing={2}>

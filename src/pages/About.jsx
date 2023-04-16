@@ -1,40 +1,43 @@
-import { Grid } from '@mui/material'
-import React from 'react'
-const aboutme = require("../data/aboutme.json")
+import React from 'react';
+import { Box, Grid, Typography } from '@mui/material';
 
-const About = () => {
+const AboutMe = () => {
   return (
-    <div className='aboutpagebackground'>
-         <Grid container spacing={2}>
-         <Grid item xs={8}  md={7}>
-         <h3 className='aboutmetext'>About <span>Me</span></h3>
-                <p className='aboutdetails'>I'm a self-taught Front End developer from India. I build websites with a focus on providing the experience for everyone using them and responsiveness. Curious to learn more about developing scalable distribution systems, love problem solving, and care about writing and maintainable code. A responsive design makes your website accessible to all users, regardless of their devices.
-                </p>
-                <ul className='skilllist'>
-                    {/* <Row>
-                        <h3>Skills</h3>
-                        <Col md={7}>
-                            <li>HTML5/CSS3</li>
-                            <li>JavaScript</li>
-                            <li>jQuery</li>
-                            <li>Bootsrap 5</li>
-                        </Col>
-                        <Col md={5}>
-                            <li>React Js</li>
-                            <li>Redux Js</li>
-                            <li>React-Bootsrap</li>
-                            <li>Material-ui</li>
-                            <li>Git/Github</li>
-                        </Col>
-                    </Row> */}
-                </ul>
-            </Grid>
-            <Grid item xs={8}  md={7}>
-            <div className="webimage"></div>
-                </Grid>
-         </Grid>
-</div>
-  )
-}
+    <Box sx={{ p: 4, height: '80vh' }}>
+      <Grid container spacing={4} alignItems="center">
+        <Grid item xs={12} md={4}>
+          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            <img
+              src="https://avatars.githubusercontent.com/u/27229817?s=400&u=07c1b5f584bc5dc5b5d1b5e10e5c937c5fde79d6&v=4"
+              alt="My Profile Image"
+              height="200px"
+              width="200px"
+              sx={{ borderRadius: '50%' }}
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={8}>
+          <Box sx={{ px: 4 }}>
+            <Typography variant="h4" gutterBottom>
+              John Doe
+            </Typography>
+            <Typography variant="h6" gutterBottom>
+              React JS Developer
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              Hi, I'm John Doe! I am a React JS developer with over 5 years of experience in creating web applications. I am passionate about creating user-friendly interfaces and developing scalable solutions. I have experience working with a variety of technologies including React, Redux, Node.js, MongoDB, and PostgreSQL.
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              Location: New York, USA
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              Email: john.doe@example.com
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
+  );
+};
 
-export default About
+export default AboutMe;

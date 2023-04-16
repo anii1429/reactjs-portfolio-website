@@ -11,7 +11,7 @@
         "title":"vendx-authentication-workflow module",
         "description":"This is a webpack-created react package, and its build file is used in a standard cdn file. The APIs are maintained on the consumer side. The change in the package file is applied to the outside of the package by using state uplifitng and props drilling. Snack bar is in the package file and is triggered from the user side when any action is taken.",
         "technologies":"ReactJS, HTML, CSS, JavaScript,npm,webpack Git,material ui",
-        "duration":"1 november 2022 - 9 february 2023"
+        "duration":"9 february 2023- 9 february 2023"
     },
     {
         "img":"",
