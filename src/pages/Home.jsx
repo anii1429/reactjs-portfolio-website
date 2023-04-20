@@ -1,6 +1,7 @@
 import { Button, Grid } from "@mui/material";
 import React, { useState } from "react";
 import Text from "../components/Text";
+import img from "../Assets/man.avif"
 import ".././style.css";
 
 const HomePage = () => {
@@ -50,7 +51,11 @@ const HomePage = () => {
           </Grid>
         </Grid>
         <Grid item xs={8} md={4}>
-          <div className="imagedeveloper"></div>
+          {/* <div className="imagedeveloper"></div> */}
+          <div className="imagedeveloper">
+          <img  className="manImage" src={img} alt="my photo" />
+          <div className="manImageDiv"></div>
+          </div>
         </Grid>
         <Grid item xs={8} md={1}></Grid>
       </Grid>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
+const aboutMe = require("../data/aboutme.json")
 
 const AboutMe = () => {
   return (
-    <Box sx={{ p: 4, height: '80vh' }}>
-      <Grid container spacing={4} alignItems="center">
+    <Box sx={{ p: 4, height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Grid container spacing={4} alignItems="center" justifyContent="center">
         <Grid item xs={12} md={4}>
           <Box sx={{ display: 'flex', justifyContent: 'center' }}>
             <img
@@ -19,19 +20,19 @@ const AboutMe = () => {
         <Grid item xs={12} md={8}>
           <Box sx={{ px: 4 }}>
             <Typography variant="h4" gutterBottom>
-              John Doe
+              {aboutMe.Personal_info.name}
             </Typography>
             <Typography variant="h6" gutterBottom>
-              React JS Developer
+            {aboutMe.Personal_info.profile}
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Hi, I'm John Doe! I am a React JS developer with over 5 years of experience in creating web applications. I am passionate about creating user-friendly interfaces and developing scalable solutions. I have experience working with a variety of technologies including React, Redux, Node.js, MongoDB, and PostgreSQL.
+            {aboutMe.Personal_info.about}
             </Typography>
             <Typography variant="body2" gutterBottom>
-              Location: New York, USA
+              Location: {aboutMe.Personal_info.city_country}
             </Typography>
             <Typography variant="body2" gutterBottom>
-              Email: john.doe@example.com
+              Email: {aboutMe.Personal_info.email}
             </Typography>
           </Box>
         </Grid>

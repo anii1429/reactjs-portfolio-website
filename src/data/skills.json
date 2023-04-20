@@ -1,22 +1,22 @@
 [
     {
-        "language":"html",
-        "lavel":""
+        "skill":"html",
+        "level":80
     },
     {
-        "language":"css",
-        "lavel":""
+        "skill":"css",
+        "level":70
     },
     {
-        "language":"javascript",
-        "lavel":""
+        "skill":"javascript",
+        "level":90
     },
     {
-        "language":"react js",
-        "lavel":""
+        "skill":"react js",
+        "level":90
     },
     {
-        "language":"next js",
-        "lavel":""
+        "skill":"next js",
+        "level":40
     }
 ]

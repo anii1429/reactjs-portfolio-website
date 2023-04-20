@@ -37,7 +37,6 @@ function NavBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -48,7 +47,9 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-           {`<ANIL/>`}
+            <Link to={"/"} relative="path" style={{ textDecoration: 'none' }}>
+            {`<ANIL/>`}
+             </Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -104,7 +105,9 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
+             <Link to={"/"} relative="path" style={{ textDecoration: 'none' }}>
             {`<ANIL/>`}
+             </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           </Box>

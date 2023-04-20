@@ -6,14 +6,14 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ".././style.css"
-
+import image from "../data/images/todo.jpg"
 
 const ProjectCard = ({project}) => {
    return (
     <><Card sx={{ maxWidth: 345 }} className="project-card-view">
     <CardMedia
       // sx={{ height: 140 }}
-      image="/static/images/cards/contemplative-reptile.jpg"
+      image={"https://www.google.com/url?sa=i&url=https%3A%2F%2Fponyfoo.com%2Farticles%2Fyou-dont-need-a-todo-app&psig=AOvVaw25mKNzbTnEWesWOWsCJcbR&ust=1682045478464000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMjjwO65t_4CFQAAAAAdAAAAABAE"}
       title="green iguana"
     />
     <CardContent>
