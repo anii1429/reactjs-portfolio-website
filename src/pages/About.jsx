@@ -1,5 +1,7 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
+import img from "../Assets/man.avif"
+import ".././style.css";
 const aboutMe = require("../data/aboutme.json")
 
 const AboutMe = () => {
@@ -7,14 +9,11 @@ const AboutMe = () => {
     <Box sx={{ p: 4, height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <Grid container spacing={4} alignItems="center" justifyContent="center">
         <Grid item xs={12} md={4}>
-          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-            <img
-              src="https://avatars.githubusercontent.com/u/27229817?s=400&u=07c1b5f584bc5dc5b5d1b5e10e5c937c5fde79d6&v=4"
-              alt="My Profile Image"
-              height="200px"
-              width="200px"
-              sx={{ borderRadius: '50%' }}
-            />
+          <Box sx={{ display: 'flex', justifyContent: 'center' ,borderRadius: '50%'}}>
+          <div className="imagedeveloper">
+          <img  className="manImage" src={img} alt="my photo" />
+          <div className="manImageDiv"></div>
+          </div>
           </Box>
         </Grid>
         <Grid item xs={12} md={8}>
