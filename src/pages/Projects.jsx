@@ -15,7 +15,7 @@ const Projects = () => {
         sx={{ height: '100%' }}
       >
         {projectdata.map((value, i) => (
-          <Grid key={i} xs={12} md={4} lg={3} item>
+          <Grid key={i} xs={12} md={4} lg={4} item>
             <ProjectCard project={value} />
           </Grid>
         ))}

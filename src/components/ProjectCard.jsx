@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSpring, animated } from '@react-spring/web';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -8,6 +9,26 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ".././style.css"
 import img from "../data/images/todo.jpg"
+
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'Roboto',
+      'Helvetica Neue',
+      'Arial',
+      'sans-serif'
+    ].join(','),
+    fontSize: 16
+  },
+  palette: {
+    primary: {
+      main: '#2196f3',
+    },
+    secondary: {
+      main: '#f50057',
+    },
+  },
+});
 
 const ProjectCard = ({project}) => {
   const [animatedStyle, setAnimatedStyle] = useSpring(() => ({
@@ -26,7 +47,7 @@ const ProjectCard = ({project}) => {
 
   return (
     <animated.div style={animatedStyle}>
-      <Card sx={{ maxWidth: 345 }} className="project-card-view">
+      <Card  className="project-card-view">
         <CardMedia
         sx={{ height: 140 }}
           image={img}
