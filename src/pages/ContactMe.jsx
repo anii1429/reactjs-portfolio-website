@@ -18,10 +18,9 @@ const ContactMe = () => {
   };
 
   return (
-    <Box sx={{ backgroundColor: '#f5f5f5', heigh: '80vh', py: 6 }}>
-      <Container maxWidth="md">
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+    <Box sx={{ backgroundColor: 'blue', py: 2 ,width:"100%"}}>
+        <Grid container spacing={3} sx={{backgroundColor: 'pink',width:"100%",margin:"auto"}}>
+          <Grid item xs={12} md={6} lg={6}>
             <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
               <Typography variant="h6" gutterBottom>Contact Information</Typography>
               <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
@@ -38,8 +37,8 @@ const ContactMe = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
+          <Grid item  xs={12} md={6} lg={6}>
+            <Box sx={{ display: 'flex',backgroundColor:"yellow", flexDirection: 'column', justifyContent: 'center', height: '100%'}}>
               <Typography variant="h6" gutterBottom>Get in touch</Typography>
               {submitted ? (
                 <Typography variant="body1" align="center" sx={{ mb: 2 }}>Thank you for your message! I'll get back to you as soon as possible.</Typography>
@@ -47,13 +46,16 @@ const ContactMe = () => {
                 <form>
                   <Grid container spacing={2}>
                     <Grid item xs={12}>
-                      <TextField label="Name" fullWidth margin="normal" name="name" value={formData.name} onChange={handleChange} />
+                      <TextField label="Your Name" fullWidth margin="normal"  variant="standard" name="name" value={formData.name} onChange={handleChange} />
                     </Grid>
                     <Grid item xs={12}>
-                      <TextField label="Email" fullWidth margin="normal" name="email" value={formData.email} onChange={handleChange} />
+                      <TextField label="Your Email" fullWidth margin="normal"  variant="standard" name="email" value={formData.email} onChange={handleChange} />
                     </Grid>
                     <Grid item xs={12}>
-                      <TextField label="Message" fullWidth margin="normal" multiline rows={4} name="message" value={formData.message} onChange={handleChange} />
+                      <TextField label="Your budget" fullWidth margin="normal"  variant="standard" name="budget" value={formData.email} onChange={handleChange} />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField label="Your Project Description" fullWidth margin="normal"  variant="standard" multiline rows={4} name="description" value={formData.message} onChange={handleChange} />
                     </Grid>
                     <Grid item xs={12}>
                       <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
@@ -68,7 +70,8 @@ const ContactMe = () => {
             </Box>
           </Grid>
         </Grid>
-      </Container>
+      {/* <Container maxWidth="lg">
+      </Container> */}
     </Box>
   );
 };
