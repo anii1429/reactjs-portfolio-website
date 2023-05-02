@@ -29,7 +29,7 @@ function NavBar() {
 
 
   return (
-    <AppBar position="static" color='transparent'>
+    <AppBar position="static" color='transparent'elevation={0}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}

@@ -5,7 +5,7 @@ function ExperiencePage() {
   return (
     <Box
       sx={{
-        p: 4,
+        // p: 4,
         // height: "75vh",
         display: "flex",
         justifyContent: "center",

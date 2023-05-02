@@ -1,8 +1,10 @@
-import { Button, Grid } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import React, { useState } from "react";
 import Text from "../components/Text";
 import img from "../Assets/man.avif"
 import ".././style.css";
+import SocialIcons from "../components/SocialIcons";
+const aboutMe = require("../data/aboutme.json");
 
 const HomePage = () => {
   return (
@@ -23,16 +25,6 @@ const HomePage = () => {
               </div>
             </Grid>
             <Grid item xs={8} md={12}>
-              {/* <Button
-                variant="contained"
-                onClick={() =>
-                  window.open(
-                    "https://drive.google.com/file/d/1XfJshU8HebNftmq6DeH41M61a8rrHsZ9/view?usp=sharing"
-                  )
-                }
-              >
-                Resume
-              </Button> */}
               <Button  variant="contained">
               <a
               style={{textDecoration:"none"}}
@@ -47,6 +39,9 @@ const HomePage = () => {
 					</a>
 
               </Button>
+            </Grid>
+            <Grid item xs={8} md={12}>
+            <Box><SocialIcons accounts={aboutMe.Social}/></Box>
             </Grid>
           </Grid>
         </Grid>

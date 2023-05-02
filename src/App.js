@@ -15,10 +15,9 @@ import { Box } from '@mui/material';
 function App() {
   return (
     <>
-    <Box sx={{height:"10vh"}}>
+    <Box sx={{height:"10%"}}>
     <NavBar/>
     </Box>
-    <Box sx={{height:"89vh"}}>
     <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/about" element={<AboutMe />} />
@@ -27,7 +26,6 @@ function App() {
     <Route path="/experience" element={<ExperiencePage />} />
     <Route path="/contactme" element={<ContactMe />} />
     </Routes>
-    </Box>
     {/* <Footer/> */}
     </>
   );

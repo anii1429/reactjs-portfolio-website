@@ -7,7 +7,7 @@ const skillsData = require("../data/skills.json");
 
 const AboutMe = () => {
   return (
-    <Box sx={{ p: 4, height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <Box sx={{backgroundColor: "#f5f5f5", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <Grid container spacing={4} alignItems="center" justifyContent="center">
         <Grid item xs={12} md={4}>
           <Box sx={{ display: 'flex', justifyContent: 'center'}}>

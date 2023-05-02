@@ -7,12 +7,15 @@ import {
   Button,
   Typography,
 } from "@mui/material";
+import SocialIcons from "../components/SocialIcons";
+const aboutMe = require("../data/aboutme.json");
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    budget: "",
+    description:""
   });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -25,16 +28,15 @@ const ContactMe = () => {
   };
 
   return (
-    <Box sx={{ backgroundColor: "blue", height: "100%" }}>
+    <Box sx={{ backgroundColor: "#f5f5f5",}}>
       <Grid
         container
         spacing={3}
         sx={{
-          backgroundColor: "pink",
+          // backgroundColor: "pink",
           width: "100%",
           margin: "auto",
           padding: "5px",
-          height: "100%",
         }}
       >
         <Grid item xs={12} md={6} lg={6}>
@@ -51,7 +53,7 @@ const ContactMe = () => {
             </Typography>
             <Typography
               variant="body1"
-              sx={{ display: "flex", alignItems: "center", mb: 1 }}
+              sx={{ display: "flex", alignItems: "center", mb: 1,fontSize:"25px" }}
             >
               I am always open to discuss your project and talk about new things
             </Typography>
@@ -77,28 +79,20 @@ const ContactMe = () => {
                   flexDirection: "column",
                   alignItems: "start",
                   mb: 1,
+                  width:"50%"
                 }}
               >
                 <Typography variant="body1">Follow me</Typography>
-                <Box></Box>
+                <Box><SocialIcons accounts={aboutMe.Social}/></Box>
               </Box>
             </Box>
-            {/* <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                <span style={{ marginRight: '8px' }}>Email:</span> john.doe@example.com
-              </Typography>
-              <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                <span style={{ marginRight: '8px' }}>Address:</span> 123 Main St, Anytown USA
-              </Typography>
-              <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '8px' }}>Contact Number:</span> (123) 456-7890
-              </Typography> */}
           </Box>
         </Grid>
         <Grid item xs={12} md={6} lg={6} sx={{ padding: "10px" }}>
           <Box
             sx={{
               display: "flex",
-              backgroundColor: "yellow",
+              backgroundColor: "#212121",
               flexDirection: "column",
               justifyContent: "center",
               height: "100%",
@@ -122,6 +116,7 @@ const ContactMe = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
+                      color="secondary"
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -133,6 +128,7 @@ const ContactMe = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
+                      color="secondary"
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -142,8 +138,9 @@ const ContactMe = () => {
                       margin="normal"
                       variant="standard"
                       name="budget"
-                      value={formData.email}
+                      value={formData.budget}
                       onChange={handleChange}
+                      color="secondary"
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -155,8 +152,9 @@ const ContactMe = () => {
                       multiline
                       rows={4}
                       name="description"
-                      value={formData.message}
+                      value={formData.description}
                       onChange={handleChange}
+                      color="secondary"
                     />
                   </Grid>
                   <Grid item xs={12}>

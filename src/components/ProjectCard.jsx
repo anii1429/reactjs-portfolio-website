@@ -8,7 +8,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ".././style.css"
-import img from "../data/images/todo.jpg"
+import notes from "../data/images/todo.jpg"
+import palette from "../data/images/colors-app.avif"
+import News from "../data/images/news.avif"
+
 
 const theme = createTheme({
   typography: {
@@ -50,7 +53,7 @@ const ProjectCard = ({project}) => {
       <Card  className="project-card-view">
         <CardMedia
         sx={{ height: 140 }}
-          image={img}
+          image={project.img=="palette"?palette:project.img=="News"?News:notes}
           title="green iguana"
         />
         <CardContent>
@@ -62,7 +65,7 @@ const ProjectCard = ({project}) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Share</Button>
+          {/* <Button size="small">Share</Button> */}
           <Button size="small">Learn More</Button>
         </CardActions>
       </Card>
