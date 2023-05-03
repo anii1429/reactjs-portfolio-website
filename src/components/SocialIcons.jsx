@@ -6,9 +6,22 @@ import Tooltip from "@mui/material/Tooltip";
 import { Facebook, GitHub, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
 
 const SocialIcon = styled(Avatar)(({ theme }) => ({
-  width: 32,
-  height: 32,
+  width: 40,
+  height: 40,
   margin: theme.spacing(0.5),
+  backgroundColor: "transparent",
+  boxShadow: "none",
+  "&:hover": {
+    backgroundColor: "transparent",
+    boxShadow: "none",
+  },
+  "& .MuiAvatar-img": {
+    objectFit: "contain",
+  },
+  "& svg": {
+    fontSize: "1.8rem",
+    color: "#212121",
+  },
 }));
 
 const SocialIcons = ({ accounts }) => {
@@ -16,13 +29,15 @@ const SocialIcons = ({ accounts }) => {
     <Box sx={{display:"flex",flexDirection:"row"}}>
       {accounts.map((account) => (
         <Tooltip title={account.name}>
+          <a href={account.url}>
           <SocialIcon>
-            {account.name === "facebook" && <Facebook color="action"  />}
-            {account.name === "twitter" && <Twitter color="action"  />}
-            {account.name === "instagram" && <Instagram color="action"  />}
-            {account.name === "linkedIn" && <LinkedIn  color="action" />}
-            {account.name === "github" && <GitHub color="action"  />}
+            {account.name === "facebook" && <Facebook color="inherit" />}
+            {account.name === "twitter" && <Twitter color="inherit" />}
+            {account.name === "instagram" && <Instagram color="inherit" />}
+            {account.name === "linkedIn" && <LinkedIn color="inherit" />}
+            {account.name === "github" && <GitHub color="inherit" />}
           </SocialIcon>
+          </a>
         </Tooltip>
       ))}
     </Box>
