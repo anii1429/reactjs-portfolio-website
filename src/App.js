@@ -15,9 +15,7 @@ import { Box } from '@mui/material';
 function App() {
   return (
     <>
-    <Box sx={{height:"10%"}}>
     <NavBar/>
-    </Box>
     <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/about" element={<AboutMe />} />

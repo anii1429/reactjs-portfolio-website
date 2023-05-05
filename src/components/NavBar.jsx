@@ -29,9 +29,10 @@ function NavBar() {
 
 
   return (
+    <Box sx={{ flexGrow: 1 }}>
     <AppBar position="static" color='transparent'elevation={0}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters style={{ height: '64px' }}>
           {/* <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h6"
@@ -82,9 +83,11 @@ function NavBar() {
               }}
             >
               {pages.map((page) => (
+                <Link to={`/${page}`} relative="path" style={{ textDecoration: 'none' }}>
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
@@ -114,20 +117,22 @@ function NavBar() {
 
           <Box sx={{ flexGrow: 0,display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page) => (
+            <Link to={`/${page}`} relative="path" style={{ textDecoration: 'none' }}>
               <Button
                 key={page}
                 // onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
-              <Link to={`/${page}`} relative="path" style={{ textDecoration: 'none' }}>
               {page} 
-              </Link>
               </Button>
+              </Link>
+
             ))}
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
+      </Box>
   );
 }
 export default NavBar;
