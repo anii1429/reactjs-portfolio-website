@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 import Grid from '@mui/material/Grid';
 import { Box, Typography } from '@mui/material';
+import Footer from '../components/Footer';
 const projectdata = require("../data/projects.json");
 
 const Projects = () => {
@@ -24,6 +25,7 @@ const Projects = () => {
           </Grid>
         ))}
       </Grid>
+      <Footer/>
     </Box>
   );
 };

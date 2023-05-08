@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import CodeIcon from '@mui/icons-material/Code';
 import { Link } from 'react-router-dom';
 
-const pages = ['About',"experience",'Projects',"contactme"];
+const pages = ['About',"experience",'Projects'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

@@ -3,6 +3,7 @@ import { Box, Grid, Typography, LinearProgress, useTheme } from '@mui/material';
 import img from "../Assets/man.avif";
 import ".././style.css";
 import SkillsComponent from '../components/SkillsComponent';
+import Footer from '../components/Footer';
 const aboutMe = require("../data/aboutme.json");
 const skillsData = require("../data/skills.json");
 
@@ -44,6 +45,7 @@ const AboutMe = () => {
           </Box>
         </Grid>
       </Grid>
+      <Footer/>
     </Box>
   );
 };

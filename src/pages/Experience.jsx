@@ -82,6 +82,7 @@
 
 import React from "react";
 import { Typography, Paper, Grid, Box } from "@mui/material";
+import Footer from "../components/Footer";
 
 function ExperiencePage() {
   return (
@@ -127,6 +128,7 @@ function ExperiencePage() {
           </Paper>
         </Grid>
       </Grid>
+      <Footer/>
     </Box>
   );
 }

@@ -1,23 +1,22 @@
 import { Instagram } from '@mui/icons-material'
 import { Grid, Stack } from '@mui/material'
 import React from 'react'
-const about = require("../data/aboutme.json")
+import SocialIcons from './SocialIcons'
+const aboutMe = require("../data/aboutme.json")
 
 const Footer = () => {
   return (
-    <div style={{height:"60vh"}}>
-      <Grid container spacing={2}>
-      <Grid item xs={8} md={3}></Grid>
-      <Grid item xs={8} md={6}>
-      <Stack direction="row" spacing={2}>
-           {about.Social.map((ele)=>{
-            return <p>{ele.name}</p>
-           })}
-    </Stack>
+    <footer style={{ position: "fixed", bottom: "0", width: "100%" }}>
+      <Grid container justifyContent="space-between" alignItems="center" sx={{padding:"20px"}}>
+      <a
+                    href={`mailto:${aboutMe.Personal_info.email}`}
+                    style={{ color: "#777777", }}
+                  >
+                   {aboutMe.Personal_info.email}
+                  </a>
+        <SocialIcons accounts={aboutMe.Social} />
       </Grid>
-      <Grid item xs={8} md={3}></Grid>
-      </Grid>
-    </div>
+    </footer>
   )
 }
 
