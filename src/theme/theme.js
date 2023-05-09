@@ -9,41 +9,42 @@ const theme = createTheme({
     h1: {
       fontSize: '45px',
       fontWeight: 700,
-      color: '#fca311',
+      color: '#3f51b5',
     },
     h2: {
       fontSize: '30px',
       fontWeight: 600,
-      color: '#ef233c',
+      color: '#6a1b9a',
     },
     h3: {
       fontSize: '20px',
       fontWeight: 500,
-      color: '#666666',
+      color: '#424242',
     },
     h4: {
       fontSize: '16px',
       fontWeight: 400,
-      color: '#000000',
+      color: '#212121',
     },
   },
   palette: {
     primary: {
-      main: '#fca311',
+      main: '#3f51b5',
     },
     secondary: {
-      main: '#ef233c',
+      main: '#6a1b9a',
     },
     text: {
-      primary: '#000000',
-      secondary: '#666666',
-      disabled: '#cfcfcf',
+      primary: '#212121',
+      secondary: '#757575',
+      disabled: '#bdbdbd',
     },
     background: {
       default: '#ffffff',
-      paper: '#cfcfcf',
+      paper: '#f5f5f5',
     },
   },
 });
+
 
 export default theme;

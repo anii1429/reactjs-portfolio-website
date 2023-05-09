@@ -4,3 +4,19 @@
   align-items: center;
   width: 100%;
 }
+
+.background-text {
+  position: relative;
+}
+
+.background-text::before {
+  content: "REACT JS";
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  font-size: 300px;
+  font-weight: bold;
+  color: grey;
+  opacity: 0.2;
+  z-index: -1;
+}
