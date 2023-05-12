@@ -5,18 +5,34 @@
   width: 100%;
 }
 
-.background-text {
+.background-text1 {
+  position: relative;
+}
+.background-text2 {
   position: relative;
 }
 
-.background-text::before {
+.background-text1::before {
   content: "REACT JS";
   position: absolute;
-  top: -30px;
-  left: -10px;
-  font-size: 300px;
+  top: 40px;
+  left: 15px;
+  font-size: 150px;
   font-weight: bold;
-  color: grey;
+  color: lightblue;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+
+.background-text2::before {
+  content: "DEVELOPER";
+  position: absolute;
+  top: 200px;
+  left: 85px;
+  font-size: 180px;
+  font-weight: bold;
+  color: lightgreen;
   opacity: 0.2;
   z-index: -1;
 }
