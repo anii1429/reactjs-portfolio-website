@@ -5,18 +5,75 @@
   width: 100%;
 }
 
-.background-text {
+.background-text1 {
+  position: relative;
+}
+.background-text2 {
   position: relative;
 }
 
-.background-text::before {
+.background-text1::before {
   content: "REACT JS";
   position: absolute;
-  top: -30px;
-  left: -10px;
-  font-size: 300px;
+  top: 40px;
+  left: 15px;
+  font-size: 150px;
   font-weight: bold;
-  color: grey;
+  color: lightblue;
   opacity: 0.2;
   z-index: -1;
+}
+
+
+.background-text2::before {
+  content: "DEVELOPER";
+  position: absolute;
+  top: 200px;
+  left: 85px;
+  font-size: 180px;
+  font-weight: bold;
+  color: lightgreen;
+  opacity: 0.2;
+  z-index: -1;
+}
+.LanguageWheel {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.LanguageWheel-segment {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  clip: rect(0, 250px, 250px, 125px);
+  border-radius: 50% 0 0 50%;
+  transform-origin: 100% 50%;
+  box-sizing: border-box;
+}
+
+.LanguageWheel-segment-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.LanguageWheel-language {
+  margin-bottom: 5px;
+}
+
+.LanguageWheel-proficiency {
+  font-size: 20px;
+  font-weight: normal;
+  color: #666;
 }

@@ -111,10 +111,7 @@
 
 import { Box, Button, Container, Grid,Typography } from "@mui/material";
 import React, { Fragment, useState } from "react";
-import Text from "../components/Text";
-import img from "../Assets/man.avif"
 import ".././style.css";
-import SocialIcons from "../components/SocialIcons";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Footer from "../components/Footer";
 const aboutMe = require("../data/aboutme.json");
@@ -123,47 +120,48 @@ const HomePage = () => {
   return (
     <Fragment>
       <main
-          style={{
-            // backgroundColor:"#f5f5f5",
-            width:"100%",
-            height:"100%",
-            minHeight:"100%",
-            padding:"40px 0"
-          }}
-          className="background-text"
-        >
-          <Container>
-            <Grid2 container sx={{display:"flex",justifyContent:"center",alignItems:"center",padding:"40px 0"}}>
+        style={{
+          width:"100%",
+          height:"100%",
+          minHeight:"100%",
+          padding:"33px 0"
+        }}
+        className="background-text1"
+      >
+        <Container className="background-text2">
+          <Grid2 container sx={{display:"flex",justifyContent:"center",alignItems:"center",padding:"40px 0"}}>
             <Grid2 item xs={12} md={12} lg={12} sm={12} sx={{display:"flex",justifyContent:"center",alignItems:"center"}}>
               <Box sx={{padding:"40px 0"}}>
-              <Typography variant="h1" sx={{color:"yellow",fontSize:"100px"}}>hello.</Typography>
-              <Typography variant="h2" sx={{color:"black",fontSize:"50px"}}>i am anil chauhan</Typography>
-              <Typography variant="body2" sx={{color:"black",fontSize:"23px"}}>i am react js developer with one year of experience </Typography>
-               <Box sx={{padding:"20px 0"}}>
-              <Button variant="contained" >
-                 <a
-                  style={{ textDecoration: "none" }}
-                  download="AnilChauhan_Resume_new.pdf"
-                 href="/files/AnilChauhan_Resume_new.pdf"
-                  className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
-                  aria-label="Download Resume"
-                >
-                  <span className="text-sm sm:text-lg font-general-medium duration-100">
-                     Download CV
-                  </span>
-                </a>
-              </Button>
-               </Box>
+                <Typography variant="h1" sx={{color:"yellow",fontSize:"100px", textShadow: "2px 2px #000"}}>hello.</Typography>
+                <Typography variant="h2" sx={{color:"black",fontSize:"50px"}}>i am anil chauhan</Typography>
+                <Typography variant="body2" sx={{color:"black",fontSize:"23px"}}>i am react js developer with one year of experience </Typography>
+                <Box sx={{padding:"20px 0"}}>
+                <Button variant="contained" color="primary">
+  <a
+    style={{ textDecoration: "none",color:"white"}}
+    download="AnilChauhan_Resume_new.pdf"
+    href="/files/AnilChauhan_Resume_new.pdf"
+    className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-white font-bold duration-500"
+    aria-label="Download Resume"
+  >
+    <span className="text-sm sm:text-lg font-general-medium duration-100">
+      Download CV
+    </span>
+  </a>
+</Button>
+
+                </Box>
               </Box>
-              </Grid2>
             </Grid2>
-          </Container>
-            <Footer/>
-        </main>
+          </Grid2>
+        </Container>
+        <Footer/>
+      </main>
     </Fragment>
   );
 };
 
 export default HomePage;
+
 
 

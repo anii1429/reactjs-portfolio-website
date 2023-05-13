@@ -6,8 +6,8 @@ const aboutMe = require("../data/aboutme.json")
 
 const Footer = () => {
   return (
-    <footer style={{ position: "fixed", bottom: "0", width: "100%" }}>
-      <Grid container justifyContent="space-between" alignItems="center" sx={{padding:"20px"}}>
+    <footer style={{ position: "fixed", bottom: "0", width: "100%",backgroundColor:"#ffffff"}}>
+      <Grid container justifyContent="space-between" alignItems="center" sx={{padding:"5px 10px"}}>
       <a
                     href={`mailto:${aboutMe.Personal_info.email}`}
                     style={{ color: "#777777", }}

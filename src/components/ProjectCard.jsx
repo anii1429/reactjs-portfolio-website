@@ -52,7 +52,7 @@ const ProjectCard = ({project}) => {
     <animated.div style={animatedStyle}>
       <Card  className="project-card-view">
         <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 100 }}
           image={project.img=="palette"?palette:project.img=="News"?News:notes}
           title="green iguana"
         />
