@@ -83,7 +83,7 @@ function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <Link to={`/${page}`} relative="path" style={{ textDecoration: 'none' }}>
+                <Link to={`/${page}`} relative="path" style={{ textDecoration: 'none' }} key={page}>
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
@@ -117,7 +117,7 @@ function NavBar() {
 
           <Box sx={{ flexGrow: 0,display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page) => (
-            <Link to={`/${page}`} relative="path" style={{ textDecoration: 'none' }}>
+            <Link to={`/${page}`} relative="path" style={{ textDecoration: 'none' }} key={page}>
               <Button
                 key={page}
                 // onClick={handleCloseNavMenu}

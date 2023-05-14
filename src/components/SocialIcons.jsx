@@ -28,7 +28,7 @@ const SocialIcons = ({ accounts }) => {
   return (
     <Box sx={{display:"flex",flexDirection:"row"}}>
       {accounts.map((account) => (
-        <Tooltip title={account.name}>
+        <Tooltip title={account.name} key={account.name}>
           <a href={account.url}>
           <SocialIcon>
             {account.name === "facebook" && <Facebook color="inherit" />}
