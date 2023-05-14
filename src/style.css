@@ -99,3 +99,13 @@
   font-weight: normal;
   color: #666;
 }
+
+@media (max-width: 360px) {
+  .background-text1::before {
+    font-size: 48px; /* Adjust font size as desired */
+  }
+  
+  .background-text2::before {
+    font-size: 48px; /* Adjust font size as desired */
+  }
+}

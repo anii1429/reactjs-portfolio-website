@@ -15,7 +15,7 @@ const Projects = () => {
         alignItems: "center",
         padding: "2px 10px",
         [theme.breakpoints.down("sm")]: {
-          paddingBottom: "100px",
+          padding: "0 30px 100px 30px",
         },
       }}
     >

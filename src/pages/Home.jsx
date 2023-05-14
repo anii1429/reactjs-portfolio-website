@@ -23,7 +23,7 @@ const HomePage = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              padding: "40px 0",
+              padding: { xs: "0", md: "40px 0" },
             }}
           >
             <Grid2
