@@ -14,6 +14,9 @@ const Projects = () => {
         justifyContent: "center",
         alignItems: "center",
         padding: "2px 10px",
+        [theme.breakpoints.down("sm")]: {
+          paddingBottom: "100px",
+        },
       }}
     >
       <Grid

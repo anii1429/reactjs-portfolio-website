@@ -24,7 +24,6 @@
   z-index: -1;
 }
 
-
 .background-text2::before {
   content: "DEVELOPER";
   position: absolute;
@@ -36,6 +35,29 @@
   opacity: 0.2;
   z-index: -1;
 }
+
+@media (max-width: 768px) {
+  .background-text1::before {
+    font-size: 100px;
+  }
+  
+  .background-text2::before {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-text1::before {
+    font-size: 68px;
+    top: 160px;
+  }
+  
+  .background-text2::before {
+    font-size: 68px;
+    left:15px;
+  }
+}
+
 .LanguageWheel {
   position: relative;
   width: 250px;

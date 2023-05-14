@@ -1,9 +1,11 @@
 import React from "react";
-import { Typography, Paper, Grid, Box, useTheme } from "@mui/material";
+import { Typography, Paper, Grid, Box, useTheme, useMediaQuery } from "@mui/material";
 import Footer from "../components/Footer";
 
 function ExperiencePage() {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box
       sx={{
@@ -25,13 +27,13 @@ function ExperiencePage() {
         <Grid item xs={12} md={8} lg={6}>
           <Paper
             sx={{
-              padding: "2rem",
+              padding: isMobile ? "1rem 1rem 5rem 1rem" : "2rem", // Adjusted padding for mobile devices
               margin: "0 20px",
               textAlign: "left",
               boxShadow: "0px 3px 10px rgba(0, 0, 0, 0.2)",
             }}
           >
-            <Typography variant="h5" sx={{ mb: 2, color: "#333" }}>
+             <Typography variant="h5" sx={{ mb: 2, color: "#333" }}>
               Technotery
             </Typography>
             <Typography variant="subtitle1" sx={{ mb: 4, color: "#008080" }}>
