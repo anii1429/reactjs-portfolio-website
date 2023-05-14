@@ -1,15 +1,15 @@
-import React from 'react';
-import Chart from 'react-apexcharts';
+import React from "react";
+import Chart from "react-apexcharts";
 
 const data = [
-  { title: 'English', value: 70, color: '#E38627' },
-  { title: 'Hindi', value: 80, color: '#C13C37' },
-  { title: 'Gujarati', value: 90, color: '#6A2135' },
+  { title: "English", value: 70, color: "#E38627" },
+  { title: "Hindi", value: 80, color: "#C13C37" },
+  { title: "Gujarati", value: 90, color: "#6A2135" },
 ];
 
 const options = {
   chart: {
-    type: 'bar',
+    type: "bar",
     height: 350,
     stacked: true,
   },
@@ -27,7 +27,7 @@ const options = {
   },
   yaxis: {
     title: {
-      text: 'Languages',
+      text: "Languages",
     },
   },
 };
@@ -35,7 +35,12 @@ const options = {
 const LanguageChart = () => {
   return (
     <div>
-      <Chart options={options} series={[{ data: data.map((item) => item.value) }]} type="bar" height={350} />
+      <Chart
+        options={options}
+        series={[{ data: data.map((item) => item.value) }]}
+        type="bar"
+        height={350}
+      />
     </div>
   );
 };

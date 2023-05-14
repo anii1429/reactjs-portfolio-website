@@ -1,19 +1,21 @@
-import React from 'react';
-import { Box, Grid, Typography, LinearProgress, useTheme } from '@mui/material';
+import React from "react";
+import { Box, Typography, LinearProgress, useTheme } from "@mui/material";
 
 const SkillsComponent = (props) => {
-  const theme = useTheme();
-  
   return (
     <>
-      {props.skillsData.map((obj,i)=>{
+      {props.skillsData.map((obj, i) => {
         return (
           <Box key={obj.skill} sx={{ mb: 2 }}>
-            <Typography variant="h6" gutterBottom sx={{ color: '#333333' }}>
+            <Typography variant="h6" gutterBottom sx={{ color: "#333333" }}>
               {obj.skill}
             </Typography>
-            <LinearProgress variant="determinate" value={obj.level} sx={{ height: 10, borderRadius: 5 }}>
-              <Typography variant="caption" sx={{ color: '#333333' }}>
+            <LinearProgress
+              variant="determinate"
+              value={obj.level}
+              sx={{ height: 10, borderRadius: 5 }}
+            >
+              <Typography variant="caption" sx={{ color: "#333333" }}>
                 {`${obj.level}%`}
               </Typography>
             </LinearProgress>

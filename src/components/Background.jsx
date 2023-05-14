@@ -1,5 +1,5 @@
-import React from 'react';
-import Particles from 'react-particles-js';
+import React from "react";
+import Particles from "react-particles-js";
 
 const Background = () => {
   return (
@@ -14,13 +14,13 @@ const Background = () => {
             },
           },
           color: {
-            value: '#ffffff',
+            value: "#ffffff",
           },
           shape: {
-            type: 'circle',
+            type: "circle",
             stroke: {
               width: 0,
-              color: '#000000',
+              color: "#000000",
             },
             polygon: {
               nb_sides: 5,
@@ -49,17 +49,17 @@ const Background = () => {
           line_linked: {
             enable: true,
             distance: 150,
-            color: '#ffffff',
+            color: "#ffffff",
             opacity: 0.4,
             width: 1,
           },
           move: {
             enable: true,
             speed: 6,
-            direction: 'none',
+            direction: "none",
             random: false,
             straight: false,
-            out_mode: 'out',
+            out_mode: "out",
             bounce: false,
             attract: {
               enable: false,
@@ -69,15 +69,15 @@ const Background = () => {
           },
         },
         interactivity: {
-          detect_on: 'canvas',
+          detect_on: "canvas",
           events: {
             onhover: {
               enable: true,
-              mode: 'repulse',
+              mode: "repulse",
             },
             onclick: {
               enable: true,
-              mode: 'push',
+              mode: "push",
             },
             resize: true,
           },
@@ -110,11 +110,11 @@ const Background = () => {
         retina_detect: true,
       }}
       style={{
-        position: 'fixed',
+        position: "fixed",
         top: 0,
         left: 0,
-        width: '100%',
-        height: '100%',
+        width: "100%",
+        height: "100%",
         zIndex: -1,
       }}
     />

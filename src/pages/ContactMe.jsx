@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Container,
-  Grid,
-  TextField,
-  Button,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, TextField, Button, Typography } from "@mui/material";
 import SocialIcons from "../components/SocialIcons";
 const aboutMe = require("../data/aboutme.json");
 
@@ -17,8 +10,6 @@ const ContactMe = () => {
     budget: "",
     description: "",
   });
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (event) => {
     setFormData({
@@ -85,9 +76,9 @@ const ContactMe = () => {
                   <span style={{ marginRight: "8px" }}>Mail me at</span>{" "}
                   <a
                     href={`mailto:${aboutMe.Personal_info.email}`}
-                    style={{ color: "#777777", }}
+                    style={{ color: "#777777" }}
                   >
-                   {aboutMe.Personal_info.email}
+                    {aboutMe.Personal_info.email}
                   </a>
                 </Typography>
               </Box>
@@ -128,7 +119,7 @@ const ContactMe = () => {
               padding: "20px",
               boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)",
               border: "1px solid #ccc",
-              borderRadius:"5px"
+              borderRadius: "5px",
             }}
           >
             {submitted ? (
@@ -152,8 +143,8 @@ const ContactMe = () => {
                           value={formData[key]}
                           onChange={handleChange}
                           color="secondary"
-                          multiline={key == "description"}
-                          rows={key == "description" && 4}
+                          multiline={key === "description"}
+                          rows={key === "description" && 4}
                         />
                       </Grid>
                     );

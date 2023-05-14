@@ -1,59 +1,44 @@
-import React from 'react';
-import { useSpring, animated } from '@react-spring/web';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import ".././style.css"
-import notes from "../data/images/todo.jpg"
-import palette from "../data/images/colors-app.avif"
-import News from "../data/images/news.avif"
+import React from "react";
+import { useSpring, animated } from "@react-spring/web";
+import { createTheme } from "@mui/material/styles";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import ".././style.css";
+import notes from "../data/images/todo.jpg";
+import palette from "../data/images/colors-app.avif";
+import News from "../data/images/news.avif";
 
-
-const theme = createTheme({
-  typography: {
-    fontFamily: [
-      'Roboto',
-      'Helvetica Neue',
-      'Arial',
-      'sans-serif'
-    ].join(','),
-    fontSize: 16
-  },
-  palette: {
-    primary: {
-      main: '#2196f3',
-    },
-    secondary: {
-      main: '#f50057',
-    },
-  },
-});
-
-const ProjectCard = ({project}) => {
+const ProjectCard = ({ project }) => {
   const [animatedStyle, setAnimatedStyle] = useSpring(() => ({
     opacity: 0,
-    transform: 'translateY(50px)',
+    transform: "translateY(50px)",
   }));
 
   // animate the card on mount
   React.useEffect(() => {
     setAnimatedStyle({
       opacity: 1,
-      transform: 'translateY(0px)',
+      transform: "translateY(0px)",
       delay: 100,
     });
   }, [setAnimatedStyle]);
 
   return (
     <animated.div style={animatedStyle}>
-      <Card  className="project-card-view">
+      <Card className="project-card-view">
         <CardMedia
-        sx={{ height: 100 }}
-          image={project.img=="palette"?palette:project.img=="News"?News:notes}
+          sx={{ height: 100 }}
+          image={
+            project.img === "palette"
+              ? palette
+              : project.img === "News"
+              ? News
+              : notes
+          }
           title="green iguana"
         />
         <CardContent>
@@ -71,6 +56,6 @@ const ProjectCard = ({project}) => {
       </Card>
     </animated.div>
   );
-}
+};
 
 export default ProjectCard;
