@@ -37,17 +37,30 @@ function NavBar() {
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                // letterSpacing: '.3rem',
-                color: "inherit",
+                fontFamily: "Arial, sans-serif",
+                fontWeight: 900,
+                fontSize: "1.5rem",
+                textTransform: "uppercase",
+                background: "linear-gradient(to right, #FFC107, #3F51B5)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
                 textDecoration: "none",
               }}
             >
               <Link to={"/"} relative="path" style={{ textDecoration: "none" }}>
-                {`<ANIL/>`}
+                anil
+                <span
+                  style={{
+                    background: "linear-gradient(to right, #3F51B5, #FFC107)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  chauhan
+                </span>
               </Link>
             </Typography>
+
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -94,25 +107,36 @@ function NavBar() {
             </Box>
             {/* <CodeIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
             <Typography
-              variant="h5"
+              variant="h6"
               noWrap
               component="a"
-              href=""
               sx={{
                 mr: 2,
                 display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
+                fontFamily: "Arial, sans-serif",
+                fontWeight: 900,
+                fontSize: "1.5rem",
+                textTransform: "uppercase",
+                background: "linear-gradient(to right, #FFC107, #3F51B5)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
                 textDecoration: "none",
               }}
             >
               <Link to={"/"} relative="path" style={{ textDecoration: "none" }}>
-                {`<ANIL/>`}
+                anil
+                <span
+                  style={{
+                    background: "linear-gradient(to right, #3F51B5, #FFC107)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  chauhan
+                </span>
               </Link>
             </Typography>
+
             <Box
               sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
             ></Box>

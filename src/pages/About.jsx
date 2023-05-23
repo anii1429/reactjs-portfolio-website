@@ -1,10 +1,12 @@
 import React from "react";
-import { Box, Grid, Typography, useTheme } from "@mui/material";
+import { Box, Grid, Stack, Typography, useTheme } from "@mui/material";
 import ".././style.css";
 import SkillsComponent from "../components/SkillsComponent";
 import Footer from "../components/Footer";
 import Education from "../components/Education";
-import myPhoto from "../Assets/photo.avif"; 
+import myPhoto from "../Assets/photo.avif";
+import LanguageChart from "../components/LanguageChart";
+import RadialChart from "../components/LanguageChart";
 
 const aboutMe = require("../data/aboutme.json");
 const skillsData = require("../data/skills.json");
@@ -13,15 +15,28 @@ const AboutMe = () => {
   const theme = useTheme();
   return (
     <Box
-      sx={{ overflowY: "hidden", "::-webkit-scrollbar": { display: "none" } }}
+      sx={{
+        overflowY: { sm: "scroll", md: "hidden" },
+        "::-webkit-scrollbar": { display: "none" },
+      }}
     >
       <Box
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <Grid container spacing={4} alignItems="center" justifyContent="center">
           <Grid item xs={12} md={4}>
-            <Box sx={{ display: 'flex', justifyContent: 'center', p: 2 }}>
-              <img className="" src={myPhoto} alt="my photo" style={{ maxWidth: "100%", maxHeight: "100%", width: "auto", height: "auto" }}/>
+            <Box sx={{ display: "flex", justifyContent: "center", p: 2 }}>
+              <img
+                className=""
+                src={myPhoto}
+                alt="my photo"
+                style={{
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  width: "auto",
+                  height: "auto",
+                }}
+              />
             </Box>
           </Grid>
           <Grid item xs={12} md={8} lg={8} sm={8}>
@@ -82,6 +97,35 @@ const AboutMe = () => {
                     <Education />
                   </Box>
                 </Grid>
+                <Grid item lg={6} sm={6} md={6} xs={12}>
+                  <Typography variant="h5" gutterBottom>
+                    Languages
+                  </Typography>
+                  <Stack
+                    direction={{ sm: "column", md: "row" }}
+                    spacing={0}
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <RadialChart title="English" value={70} color="#E38627" />
+                    <RadialChart title="Hindi" value={80} color="#C13C37" />
+                    <RadialChart title="Gujarati" value={90} color="#6A2135" />
+                  </Stack>
+                </Grid>
+                <Grid item lg={6} sm={6} md={6} xs={12}>
+                  <Typography variant="h5" gutterBottom>
+                    technologies 
+                  </Typography>
+                  {/* <Typography variant="body1" gutterBottom>
+                   npm
+                  </Typography>
+                  <Typography variant="body1" gutterBottom>
+                   github
+                  </Typography>
+                  <Typography variant="body1" gutterBottom>
+                   redux
+                  </Typography> */}
+                  </Grid>
               </Grid>
             </Box>
           </Grid>

@@ -1,48 +1,37 @@
-import React from "react";
-import Chart from "react-apexcharts";
+import React from 'react';
+import Chart from 'react-apexcharts';
 
-const data = [
-  { title: "English", value: 70, color: "#E38627" },
-  { title: "Hindi", value: 80, color: "#C13C37" },
-  { title: "Gujarati", value: 90, color: "#6A2135" },
-];
+class RadialChart extends React.Component {
+  render() {
+    const { title, value, color } = this.props;
 
-const options = {
-  chart: {
-    type: "bar",
-    height: 350,
-    stacked: true,
-  },
-  plotOptions: {
-    bar: {
-      horizontal: true,
-    },
-  },
-  colors: data.map((item) => item.color),
-  dataLabels: {
-    enabled: false,
-  },
-  xaxis: {
-    categories: data.map((item) => item.title),
-  },
-  yaxis: {
-    title: {
-      text: "Languages",
-    },
-  },
-};
+    const options = {
+      chart: {
+        type: 'radialBar',
+      },
+      plotOptions: {
+        radialBar: {
+          dataLabels: {
+            total: {
+              show: true,
+              label: title,
+              formatter: (w) => `${value}%`,
+            },
+          },
+        },
+      },
+      labels: [title],
+      colors: [color],
+    };
 
-const LanguageChart = () => {
-  return (
-    <div>
-      <Chart
-        options={options}
-        series={[{ data: data.map((item) => item.value) }]}
-        type="bar"
-        height={350}
-      />
-    </div>
-  );
-};
+    const series = [value];
 
-export default LanguageChart;
+    return (
+      <div style={{ width: '200px' }}>
+        <Chart options={options} series={series} type="radialBar" height={200} />
+      </div>
+    );
+  }
+}
+
+export default RadialChart;
