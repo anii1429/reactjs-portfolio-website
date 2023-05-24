@@ -13,6 +13,9 @@ function ExperiencePage() {
         justifyContent: "center",
         alignItems: "center",
         overflow: "hidden",
+        [theme.breakpoints.down("sm")]: {
+          mb: 6,
+        },
       }}
     >
       <Grid container direction="column" alignItems="center" spacing={4}>
@@ -30,13 +33,27 @@ function ExperiencePage() {
               padding: isMobile ? "1rem 1rem 5rem 1rem" : "2rem", // Adjusted padding for mobile devices
               margin: "0 20px",
               textAlign: "left",
+              [theme.breakpoints.down("sm")]: {
+                margin: "0 20px 40px",
+              },
               boxShadow: "0px 3px 10px rgba(0, 0, 0, 0.2)",
             }}
           >
-             <Typography variant="h5" sx={{ mb: 2, color: "#333" }}>
+             <Typography variant="h5" sx={{ 
+              mb: 2, 
+              color: "#333",
+              [theme.breakpoints.down("sm")]: {
+                mb: 1,
+              },
+              }}>
               Technotery
             </Typography>
-            <Typography variant="subtitle1" sx={{ mb: 4, color: "#008080" }}>
+            <Typography variant="subtitle1" sx={{ mb: 4, 
+              color: "#008080",
+              [theme.breakpoints.down("sm")]: {
+                mb: 2,
+              }
+              }}>
               React JS Developer
             </Typography>
             <Typography variant="body1" sx={{ color: "#555" }}>
