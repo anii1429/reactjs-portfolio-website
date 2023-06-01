@@ -11,13 +11,14 @@ import RadialChart from "../components/LanguageChart";
 const aboutMe = require("../data/aboutme.json");
 const skillsData = require("../data/skills.json");
 
-const AboutMe = () => {
+const AboutMe = ({currentTheme}) => {
   const theme = useTheme();
   return (
     <Box
       sx={{
         overflowY: { sm: "scroll", md: "hidden" },
         "::-webkit-scrollbar": { display: "none" },
+        backgroundColor: currentTheme === 'light' ? 'white' : '#353535'
       }}
     >
       <Box
@@ -132,7 +133,7 @@ const AboutMe = () => {
           </Grid>
         </Grid>
       </Box>
-      <Footer />
+      <Footer currentTheme={currentTheme}/>
     </Box>
   );
 };

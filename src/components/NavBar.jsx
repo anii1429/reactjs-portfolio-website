@@ -28,7 +28,7 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: currentTheme === 'light' ? 'white' : 'black', color: 'primary' }} elevation={0}>
+      <AppBar position="static" sx={{ backgroundColor: currentTheme === 'light' ? 'white' : '#353535', color: 'primary' }} elevation={0}>
         <Container maxWidth="xl">
           <Toolbar disableGutters style={{ height: "64px" }}>
             {/* <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -94,7 +94,7 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
                 }}
               > 
               <IconButton onClick={() => setCurrentTheme(currentTheme === 'light'?"dark":"light")}>
-              {currentTheme == 'light' ? <DarkModeIcon style={{ color: 'black' }} /> : <LightModeIcon style={{ color: 'white' }}/>}
+              {currentTheme == 'light' ? <DarkModeIcon style={{ color: '#353535' }} /> : <LightModeIcon style={{ color: 'white' }}/>}
               </IconButton>
                 {pages.map((page) => (
                   <Link
@@ -148,7 +148,7 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
 
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
               <IconButton onClick={() => setCurrentTheme(currentTheme === 'light'?"dark":"light")}>
-              {currentTheme == 'light' ? <DarkModeIcon style={{ color: 'black' }} /> : <LightModeIcon style={{ color: 'white' }} />}
+              {currentTheme == 'light' ? <DarkModeIcon style={{ color: '#353535' }} /> : <LightModeIcon style={{ color: 'white' }} />}
               </IconButton>
               {pages.map((page) => (
                 <Link
@@ -160,7 +160,7 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
                   <Button
                     key={page}
                     // onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "black", display: "block" }}
+                    sx={{ my: 2, color:currentTheme === 'light' ? "#353535" :"white", display: "block" }}
                   >
                     {page}
                   </Button>

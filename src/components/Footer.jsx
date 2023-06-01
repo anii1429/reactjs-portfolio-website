@@ -3,14 +3,14 @@ import React from "react";
 import SocialIcons from "./SocialIcons";
 const aboutMe = require("../data/aboutme.json");
 
-const Footer = () => {
+const Footer = ({currentTheme}) => {
   return (
     <footer
       style={{
         position: "fixed",
         bottom: "0",
         width: "100%",
-        backgroundColor: "#ffffff",
+        backgroundColor: currentTheme === 'light' ? 'white' : '#353535'
       }}
     >
       <Grid

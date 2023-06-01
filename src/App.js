@@ -13,13 +13,13 @@ function App() {
   
   return (
     <>
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={currentTheme=="light" ? lightTheme : darkTheme}>
     <NavBar setCurrentTheme={setCurrentTheme}  currentTheme={currentTheme}/>
     <Routes>
-    <Route path="/" element={<HomePage />} />
-    <Route path="/about" element={<AboutMe />} />
-    <Route path="/projects" element={<Projects />} />
-    <Route path="/experience" element={<ExperiencePage />} />
+    <Route path="/" element={<HomePage currentTheme={currentTheme} />} />
+    <Route path="/about" element={<AboutMe currentTheme={currentTheme} />} />
+    <Route path="/projects" element={<Projects currentTheme={currentTheme} />} />
+    <Route path="/experience" element={<ExperiencePage currentTheme={currentTheme} />} />
     </Routes>
     </ThemeProvider>
     </>
