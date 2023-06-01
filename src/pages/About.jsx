@@ -113,9 +113,10 @@ const AboutMe = () => {
                   </Stack>
                 </Grid>
                 <Grid item lg={6} sm={6} md={6} xs={12}>
-                  <Typography variant="h5" gutterBottom>
+                  {/* <Typography variant="h5" gutterBottom>
                     technologies 
-                  </Typography>
+                  </Typography> */}
+                  
                   {/* <Typography variant="body1" gutterBottom>
                    npm
                   </Typography>

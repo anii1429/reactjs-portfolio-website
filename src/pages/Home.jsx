@@ -12,7 +12,8 @@ const HomePage = () => {
           width: "100%",
           height: "100%",
           minHeight: "100%",
-          padding: "33px 0",
+          padding: "45px 0",
+          backgroundColor:"red"
         }}
         className="background-text1"
       >

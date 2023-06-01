@@ -10,10 +10,12 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const pages = ["About", "experience", "Projects"];
 
-function NavBar() {
+const NavBar = ({ setCurrentTheme, currentTheme }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -26,7 +28,7 @@ function NavBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="transparent" elevation={0}>
+      <AppBar position="static" sx={{ backgroundColor: currentTheme === 'light' ? 'white' : 'black', color: 'primary' }} elevation={0}>
         <Container maxWidth="xl">
           <Toolbar disableGutters style={{ height: "64px" }}>
             {/* <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -90,7 +92,10 @@ function NavBar() {
                 sx={{
                   display: { xs: "block", md: "none" },
                 }}
-              >
+              > 
+              <IconButton onClick={() => setCurrentTheme(currentTheme === 'light'?"dark":"light")}>
+              {currentTheme == 'light' ? <DarkModeIcon style={{ color: 'black' }} /> : <LightModeIcon style={{ color: 'white' }}/>}
+              </IconButton>
                 {pages.map((page) => (
                   <Link
                     to={`/${page}`}
@@ -142,6 +147,9 @@ function NavBar() {
             ></Box>
 
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
+              <IconButton onClick={() => setCurrentTheme(currentTheme === 'light'?"dark":"light")}>
+              {currentTheme == 'light' ? <DarkModeIcon style={{ color: 'black' }} /> : <LightModeIcon style={{ color: 'white' }} />}
+              </IconButton>
               {pages.map((page) => (
                 <Link
                   to={`/${page}`}
