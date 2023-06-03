@@ -1,21 +1,18 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Container, Typography, useTheme } from "@mui/material";
 import React, { Fragment } from "react";
 import ".././style.css";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Footer from "../components/Footer";
 
 const HomePage = ({currentTheme}) => {
+  const theme = useTheme();
   return (
     <Fragment>
       <main
         style={{
-          width: "100%",
-          height: "100%",
-          minHeight: "100%",
-          padding: "45px 0",
-          backgroundColor: currentTheme === 'light' ? 'white' : '#353535'
+          backgroundColor: currentTheme === 'light' ? 'white' : '#121212'
         }}
-        className="background-text1"
+        className="background-text1 home-main"
       >
         <Container className="background-text2">
           <Grid2
@@ -52,13 +49,13 @@ const HomePage = ({currentTheme}) => {
                 </Typography>
                 <Typography
                   variant="h2"
-                  sx={{ color:currentTheme === 'light' ? "#353535" :"white", fontSize: "50px" }}
+                  sx={{ color:currentTheme === 'light' ? "#121212" :"white", fontSize: "50px" }}
                 >
                   i am anil chauhan
                 </Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color:currentTheme === 'light' ? "#353535" :"white", fontSize: "23px" }}
+                  sx={{ color:currentTheme === 'light' ? "#121212" :"white", fontSize: "23px" }}
                 >
                   i am react js developer with one year of experience{" "}
                 </Typography>

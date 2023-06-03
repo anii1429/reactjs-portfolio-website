@@ -10,7 +10,7 @@ const Footer = ({currentTheme}) => {
         position: "fixed",
         bottom: "0",
         width: "100%",
-        backgroundColor: currentTheme === 'light' ? 'white' : '#353535'
+        backgroundColor: currentTheme === 'light' ? 'white' : '#121212'
       }}
     >
       <Grid

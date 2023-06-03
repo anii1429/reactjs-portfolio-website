@@ -40,7 +40,7 @@ const lightTheme = createTheme({
     background: {
       default: '#ffffff',
       paper: '#f5f5f5',
-    },
+    },        
   },
 });
 
@@ -78,7 +78,7 @@ const darkTheme = createTheme({
     },
     text: {
       primary: '#e0e0e0',
-      secondary: '#9e9e9e',
+      secondary: 'white',
       disabled: '#616161',
     },
     background: {

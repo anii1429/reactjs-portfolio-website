@@ -1,5 +1,5 @@
-[
-    {
+{
+   "recent-projects" : [ {
         "img":"",
         "title":"vendx-slab module",
         "description":"In this module, the user was to provide some input range, and at least two slabs and a maximum of thirty could be added. and the beginning of the second slab must be 1 plus the ending of the previous slab. This entire slab was related to a specific item, and itmes were rendered in the table. Each item has its own slab.",
@@ -19,5 +19,11 @@
         "description":"Cloud Kida is a platform that provides users with a virtual lab in which to complete their tasks. There are three user roles in this app, and each user has their own roles-based data. As a result, protected routes are used for rendering user-base data.",
         "technologies":"ReactJS, HTML, CSS, JavaScript, Git,redux,material ui",
         "duration":"1 august 2022 -  30 august 2022"
-    }
-]
+    }],
+    "experience":[
+        "I worked as a React JS developer at Technotery for one year. During this period, I gained expertise in various front-end technologies, including React JS, Redux Thunk, JavaScript, andMaterial UI.",
+        " I worked on implementing form management and validation, Axios API connectivity, and handling API error codes. These tasks allowed me to deepen my understanding of React JS and front-end developmentprinciples.",
+        "I also collaborated with other developers on various projects,performing code reviews and resolving merge conflicts. Additionally, I was responsible for managing project workflows using GitHub's project management features, such as issues and pull requests."
+    ]
+
+}

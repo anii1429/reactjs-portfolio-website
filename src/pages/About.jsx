@@ -4,7 +4,7 @@ import ".././style.css";
 import SkillsComponent from "../components/SkillsComponent";
 import Footer from "../components/Footer";
 import Education from "../components/Education";
-import myPhoto from "../Assets/photo.avif";
+import myPhoto from "../Assets/aboutImage.jpg";
 import LanguageChart from "../components/LanguageChart";
 import RadialChart from "../components/LanguageChart";
 
@@ -18,7 +18,8 @@ const AboutMe = ({currentTheme}) => {
       sx={{
         overflowY: { sm: "scroll", md: "hidden" },
         "::-webkit-scrollbar": { display: "none" },
-        backgroundColor: currentTheme === 'light' ? 'white' : '#353535'
+        backgroundColor: currentTheme === 'light' ? 'white' : '#121212',
+        padding:"5px 0"
       }}
     >
       <Box
@@ -32,7 +33,7 @@ const AboutMe = ({currentTheme}) => {
                 src={myPhoto}
                 alt="my photo"
                 style={{
-                  maxWidth: "100%",
+                  maxWidth: "80%",
                   maxHeight: "100%",
                   width: "auto",
                   height: "auto",

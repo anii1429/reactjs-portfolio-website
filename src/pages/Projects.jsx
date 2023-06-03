@@ -5,7 +5,7 @@ import { Box, Typography, useTheme } from "@mui/material";
 import Footer from "../components/Footer";
 const projectdata = require("../data/projects.json");
 
-const Projects = () => {
+const Projects = ({currentTheme}) => {
   const theme = useTheme();
   return (
     <Box
@@ -13,10 +13,11 @@ const Projects = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "2px 10px",
+        padding: "6px 10px",
         [theme.breakpoints.down("sm")]: {
           padding: "0 30px 100px 30px",
         },
+        backgroundColor: currentTheme === 'light' ? 'white' : '#121212'
       }}
     >
       <Grid
@@ -47,7 +48,7 @@ const Projects = () => {
           </Grid>
         ))}
       </Grid>
-      <Footer />
+      <Footer currentTheme={currentTheme} />
     </Box>
   );
 };

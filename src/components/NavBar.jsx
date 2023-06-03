@@ -10,8 +10,8 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 const pages = ["About", "experience", "Projects"];
 
@@ -28,17 +28,23 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: currentTheme === 'light' ? 'white' : '#353535', color: 'primary' }} elevation={0}>
+      <AppBar
+        position="static"
+        sx={{
+          backgroundColor: currentTheme === "light" ? "white" : "#121212",
+          color: "primary",
+        }}
+        elevation={0}
+      >
         <Container maxWidth="xl">
           <Toolbar disableGutters style={{ height: "64px" }}>
-            {/* <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <Typography
               variant="h6"
               noWrap
               component="a"
               sx={{
                 mr: 2,
-                display: { xs: "none", md: "flex" },
+                // display: { xs: "none", md: "flex" },
                 fontFamily: "Arial, sans-serif",
                 fontWeight: 900,
                 fontSize: "1.5rem",
@@ -63,6 +69,18 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
               </Link>
             </Typography>
 
+            <IconButton
+              sx={{display: { xs: "flex", md: "none" ,marginLeft:"32px"}}}
+              onClick={() =>
+                setCurrentTheme(currentTheme === "light" ? "dark" : "light")
+              }
+            >
+              {currentTheme == "light" ? (
+                <DarkModeIcon style={{ color: "#121212" }} />
+              ) : (
+                <LightModeIcon style={{ color: "white" }} />
+              )}
+            </IconButton>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -71,7 +89,7 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleOpenNavMenu}
-                color="inherit"
+                color={currentTheme === "light" ? "white" : "#121212"}
               >
                 <MenuIcon />
               </IconButton>
@@ -92,10 +110,7 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
                 sx={{
                   display: { xs: "block", md: "none" },
                 }}
-              > 
-              <IconButton onClick={() => setCurrentTheme(currentTheme === 'light'?"dark":"light")}>
-              {currentTheme == 'light' ? <DarkModeIcon style={{ color: '#353535' }} /> : <LightModeIcon style={{ color: 'white' }}/>}
-              </IconButton>
+              >
                 {pages.map((page) => (
                   <Link
                     to={`/${page}`}
@@ -110,46 +125,24 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
                 ))}
               </Menu>
             </Box>
-            {/* <CodeIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                fontFamily: "Arial, sans-serif",
-                fontWeight: 900,
-                fontSize: "1.5rem",
-                textTransform: "uppercase",
-                background: "linear-gradient(to right, #FFC107, #3F51B5)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                textDecoration: "none",
-              }}
-            >
-              <Link to={"/"} relative="path" style={{ textDecoration: "none" }}>
-                anil
-                <span
-                  style={{
-                    background: "linear-gradient(to right, #3F51B5, #FFC107)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  chauhan
-                </span>
-              </Link>
-            </Typography>
 
             <Box
               sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
             ></Box>
-
+             
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-              <IconButton onClick={() => setCurrentTheme(currentTheme === 'light'?"dark":"light")}>
-              {currentTheme == 'light' ? <DarkModeIcon style={{ color: '#353535' }} /> : <LightModeIcon style={{ color: 'white' }} />}
-              </IconButton>
+            <IconButton
+              sx={{display: { xs: "none", md: "flex" }}}
+              onClick={() =>
+                setCurrentTheme(currentTheme === "light" ? "dark" : "light")
+              }
+            >
+              {currentTheme == "light" ? (
+                <DarkModeIcon style={{ color: "#121212" }} />
+              ) : (
+                <LightModeIcon style={{ color: "white" }} />
+              )}
+            </IconButton>
               {pages.map((page) => (
                 <Link
                   to={`/${page}`}
@@ -160,7 +153,11 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
                   <Button
                     key={page}
                     // onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color:currentTheme === 'light' ? "#353535" :"white", display: "block" }}
+                    sx={{
+                      my: 2,
+                      color: currentTheme === "light" ? "#121212" : "white",
+                      display: "block",
+                    }}
                   >
                     {page}
                   </Button>
@@ -172,5 +169,5 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
       </AppBar>
     </Box>
   );
-}
+};
 export default NavBar;
