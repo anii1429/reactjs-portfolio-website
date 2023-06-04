@@ -18,7 +18,6 @@ const AboutMe = ({ currentTheme }) => {
       sx={{
         overflowY: { sm: "scroll", md: "hidden" },
         "::-webkit-scrollbar": { display: "none" },
-        backgroundColor: currentTheme === "light" ? "white" : "#121212",
         padding: "5px 0",
       }}
     >

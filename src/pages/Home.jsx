@@ -9,9 +9,6 @@ const HomePage = ({ currentTheme }) => {
   return (
     <Fragment>
       <main
-        style={{
-          backgroundColor: currentTheme === "light" ? "white" : "#121212",
-        }}
         className="background-text1 home-main"
       >
         <Container className="background-text2">

@@ -6,10 +6,16 @@ import HomePage from './pages/Home';
 import ExperiencePage from './pages/Experience';
 import { ThemeProvider } from '@mui/material';
 import { lightTheme, darkTheme } from './theme/theme';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [currentTheme,setCurrentTheme] = useState("light")
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    body.style.backgroundColor =
+      currentTheme === 'dark' ? darkTheme.palette.background.default : lightTheme.palette.background.default;
+  }, [currentTheme]);
   
   return (
     <>

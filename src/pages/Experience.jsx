@@ -24,7 +24,6 @@ function ExperiencePage({ currentTheme }) {
         [theme.breakpoints.down("sm")]: {
           mb: 6,
         },
-        backgroundColor: currentTheme == "light" ? "white" : "#121212",
         paddingBottom: "52px",
       }}
     >

@@ -17,7 +17,6 @@ const Projects = ({ currentTheme }) => {
         [theme.breakpoints.down("sm")]: {
           padding: "0 30px 100px 30px",
         },
-        backgroundColor: currentTheme === "light" ? "white" : "#121212",
       }}
     >
       <Grid

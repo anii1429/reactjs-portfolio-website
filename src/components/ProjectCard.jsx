@@ -51,7 +51,9 @@ const ProjectCard = ({ project }) => {
         </CardContent>
         <CardActions>
           {/* <Button size="small">Share</Button> */}
+          <a href={project.source_code} target="_blank" rel="noopener noreferrer">
           <Button size="small">Source Code</Button>
+            </a>
         </CardActions>
       </Card>
     </animated.div>
