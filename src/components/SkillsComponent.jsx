@@ -7,7 +7,7 @@ const SkillsComponent = (props) => {
       {props.skillsData.map((obj, i) => {
         return (
           <Box key={obj.skill} sx={{ mb: 2 }}>
-            <Typography variant="h6" gutterBottom sx={{ color: "#333333" }}>
+            <Typography variant="h6" gutterBottom>
               {obj.skill}
             </Typography>
             <LinearProgress

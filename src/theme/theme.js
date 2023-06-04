@@ -67,11 +67,17 @@ const darkTheme = createTheme({
       fontWeight: 400,
       color: '#e0e0e0',
     },
+    h5:{
+      color:"#C147E9"
+    },
+    h6:{
+      color:"#B2A4FF"
+    }
   },
   palette: {
     mode: 'dark', // Switches to dark mode
     primary: {
-      main: '#3f51b5',
+      main: '#C147E9',
     },
     secondary: {
       main: '#6a1b9a',

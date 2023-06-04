@@ -1,5 +1,5 @@
-import React from 'react';
-import Chart from 'react-apexcharts';
+import React from "react";
+import Chart from "react-apexcharts";
 
 class RadialChart extends React.Component {
   render() {
@@ -7,7 +7,7 @@ class RadialChart extends React.Component {
 
     const options = {
       chart: {
-        type: 'radialBar',
+        type: "radialBar",
       },
       plotOptions: {
         radialBar: {
@@ -27,8 +27,13 @@ class RadialChart extends React.Component {
     const series = [value];
 
     return (
-      <div style={{ width: '200px' }}>
-        <Chart options={options} series={series} type="radialBar" height={200} />
+      <div style={{ width: "200px" }}>
+        <Chart
+          options={options}
+          series={series}
+          type="radialBar"
+          height={200}
+        />
       </div>
     );
   }

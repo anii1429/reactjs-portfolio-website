@@ -5,7 +5,7 @@ import { Box, Typography, useTheme } from "@mui/material";
 import Footer from "../components/Footer";
 const projectdata = require("../data/projects.json");
 
-const Projects = ({currentTheme}) => {
+const Projects = ({ currentTheme }) => {
   const theme = useTheme();
   return (
     <Box
@@ -17,7 +17,7 @@ const Projects = ({currentTheme}) => {
         [theme.breakpoints.down("sm")]: {
           padding: "0 30px 100px 30px",
         },
-        backgroundColor: currentTheme === 'light' ? 'white' : '#121212'
+        backgroundColor: currentTheme === "light" ? "white" : "#121212",
       }}
     >
       <Grid
@@ -36,7 +36,8 @@ const Projects = ({currentTheme}) => {
           </Typography>
           <Typography
             variant="subtitle1"
-            sx={{ fontWeight: "bold", color: "#444" }}
+            color="text.secondary"
+            sx={{ fontWeight: "bold" }}
           >
             Check out some of my recent work and see what I've been up to
             lately.

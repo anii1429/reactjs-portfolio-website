@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
+import { styled, useTheme } from "@mui/material/styles";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Tooltip from "@mui/material/Tooltip";
@@ -26,22 +26,48 @@ const SocialIcon = styled(Avatar)(({ theme }) => ({
   },
   "& svg": {
     fontSize: "1.8rem",
-    color: "#212121",
   },
 }));
 
 const SocialIcons = ({ accounts }) => {
+  const theme = useTheme();
   return (
     <Box sx={{ display: "flex", flexDirection: "row" }}>
       {accounts.map((account) => (
         <Tooltip title={account.name} key={account.name}>
           <a href={account.url}>
             <SocialIcon>
-              {account.name === "facebook" && <Facebook color="inherit" />}
-              {account.name === "twitter" && <Twitter color="inherit" />}
-              {account.name === "instagram" && <Instagram color="inherit" />}
-              {account.name === "linkedIn" && <LinkedIn color="inherit" />}
-              {account.name === "github" && <GitHub color="inherit" />}
+              {account.name === "facebook" && (
+                <Facebook
+                  sx={{
+                    color: theme.palette.mode == "dark" ? "#1877F2" : "#3b5998",
+                  }}
+                />
+              )}
+              {account.name === "twitter" && (
+                <Twitter sx={{ color: "#1DA1F2" }} />
+              )}
+              {account.name === "instagram" && (
+                <Instagram
+                  sx={{
+                    color: theme.palette.mode == "dark" ? "#FF0080" : "#E1306C",
+                  }}
+                />
+              )}
+              {account.name === "linkedIn" && (
+                <LinkedIn
+                  sx={{
+                    color: theme.palette.mode == "dark" ? "#0077B5" : "#0e76a8",
+                  }}
+                />
+              )}
+              {account.name === "github" && (
+                <GitHub
+                  sx={{
+                    color: theme.palette.mode == "dark" ? "#FFFFFF" : "#000000",
+                  }}
+                />
+              )}
             </SocialIcon>
           </a>
         </Tooltip>

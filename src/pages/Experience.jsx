@@ -1,9 +1,16 @@
 import React from "react";
-import { Typography, Paper, Grid, Box, useTheme, useMediaQuery } from "@mui/material";
+import {
+  Typography,
+  Paper,
+  Grid,
+  Box,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import Footer from "../components/Footer";
-const recentWork = require("../data/recentWork.json")
+const recentWork = require("../data/recentWork.json");
 
-function ExperiencePage({currentTheme}) {
+function ExperiencePage({ currentTheme }) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -17,8 +24,8 @@ function ExperiencePage({currentTheme}) {
         [theme.breakpoints.down("sm")]: {
           mb: 6,
         },
-        backgroundColor: currentTheme == 'light' ? 'white' : '#121212',
-        paddingBottom:"52px"
+        backgroundColor: currentTheme == "light" ? "white" : "#121212",
+        paddingBottom: "52px",
       }}
     >
       <Grid container direction="column" alignItems="center" spacing={4}>
@@ -42,26 +49,32 @@ function ExperiencePage({currentTheme}) {
               boxShadow: "0px 3px 10px rgba(0, 0, 0, 0.2)",
             }}
           >
-             <Typography variant="h5" sx={{ 
-              mb: 2, 
-              [theme.breakpoints.down("sm")]: {
-                mb: 1,
-              },
-              }}>
+            <Typography
+              variant="h5"
+              sx={{
+                mb: 2,
+                [theme.breakpoints.down("sm")]: {
+                  mb: 1,
+                },
+              }}
+            >
               Technotery
             </Typography>
-            <Typography variant="subtitle1" sx={{ mb: 4, 
-              color: "#008080",
-              [theme.breakpoints.down("sm")]: {
-                mb: 0,
-              }
-              }}>
+            <Typography
+              variant="h6"
+              sx={{
+                mb: 4,
+                [theme.breakpoints.down("sm")]: {
+                  mb: 0,
+                },
+              }}
+            >
               React JS Developer
             </Typography>
-            {recentWork.experience.map((item,i)=>(
+            {recentWork.experience.map((item, i) => (
               <Typography variant="body1" sx={{ mt: 2 }}>
-               {item}
-             </Typography>
+                {item}
+              </Typography>
             ))}
           </Paper>
         </Grid>

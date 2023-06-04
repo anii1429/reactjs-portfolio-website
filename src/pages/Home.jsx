@@ -4,13 +4,13 @@ import ".././style.css";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Footer from "../components/Footer";
 
-const HomePage = ({currentTheme}) => {
+const HomePage = ({ currentTheme }) => {
   const theme = useTheme();
   return (
     <Fragment>
       <main
         style={{
-          backgroundColor: currentTheme === 'light' ? 'white' : '#121212'
+          backgroundColor: currentTheme === "light" ? "white" : "#121212",
         }}
         className="background-text1 home-main"
       >
@@ -49,13 +49,19 @@ const HomePage = ({currentTheme}) => {
                 </Typography>
                 <Typography
                   variant="h2"
-                  sx={{ color:currentTheme === 'light' ? "#121212" :"white", fontSize: "50px" }}
+                  sx={{
+                    color: currentTheme === "light" ? "#121212" : "white",
+                    fontSize: "50px",
+                  }}
                 >
                   i am anil chauhan
                 </Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color:currentTheme === 'light' ? "#121212" :"white", fontSize: "23px" }}
+                  sx={{
+                    color: currentTheme === "light" ? "#121212" : "white",
+                    fontSize: "23px",
+                  }}
                 >
                   i am react js developer with one year of experience{" "}
                 </Typography>
@@ -78,7 +84,7 @@ const HomePage = ({currentTheme}) => {
             </Grid2>
           </Grid2>
         </Container>
-        <Footer currentTheme={currentTheme}/>
+        <Footer currentTheme={currentTheme} />
       </main>
     </Fragment>
   );
