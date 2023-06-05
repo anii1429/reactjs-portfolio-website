@@ -40,7 +40,7 @@ const SocialIcons = ({ accounts }) => {
               {account.name === "facebook" && (
                 <Facebook
                   sx={{
-                    color: theme.palette.mode == "dark" ? "#1877F2" : "#3b5998",
+                    color: theme.palette.mode == "dark" ? "#f1f1f1" : "#3b5998",
                   }}
                 />
               )}
@@ -50,21 +50,21 @@ const SocialIcons = ({ accounts }) => {
               {account.name === "instagram" && (
                 <Instagram
                   sx={{
-                    color: theme.palette.mode == "dark" ? "#FF0080" : "#E1306C",
+                    color: theme.palette.mode == "dark" ? "#f1f1f1": "#E1306C",
                   }}
                 />
               )}
               {account.name === "linkedIn" && (
                 <LinkedIn
                   sx={{
-                    color: theme.palette.mode == "dark" ? "#0077B5" : "#0e76a8",
+                    color: theme.palette.mode == "dark" ? "#f1f1f1" : "#0e76a8",
                   }}
                 />
               )}
               {account.name === "github" && (
                 <GitHub
                   sx={{
-                    color: theme.palette.mode == "dark" ? "#FFFFFF" : "#000000",
+                    color: theme.palette.mode == "dark" ? "#f1f1f1" : "#000000",
                   }}
                 />
               )}

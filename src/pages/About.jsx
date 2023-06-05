@@ -56,7 +56,6 @@ const AboutMe = ({ currentTheme }) => {
               <Typography
                 variant="h2"
                 gutterBottom
-                sx={{ color: theme.palette.primary.main }}
               >
                 ABOUT ME
               </Typography>

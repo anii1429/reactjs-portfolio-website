@@ -30,8 +30,8 @@ function ExperiencePage({ currentTheme }) {
       <Grid container direction="column" alignItems="center" spacing={4}>
         <Grid item>
           <Typography
-            variant="h3"
-            sx={{ fontWeight: "bold", color: theme.palette.primary.main }}
+            variant="h2"
+            sx={{ fontWeight: "bold" }}
           >
             My Experience
           </Typography>

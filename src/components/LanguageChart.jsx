@@ -1,5 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
+import ".././style.css";
 
 class RadialChart extends React.Component {
   render() {
@@ -22,6 +23,10 @@ class RadialChart extends React.Component {
       },
       labels: [title],
       colors: [color],
+      style: {
+        fontFamily: 'Arial',
+        colors: ['#FFFFFF'], // Set the text color to white
+      },
     };
 
     const series = [value];

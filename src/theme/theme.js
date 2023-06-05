@@ -11,7 +11,7 @@ const lightTheme = createTheme({
     h2: {
       fontSize: '30px',
       fontWeight: 600,
-      color: '#6a1b9a',
+      color: '#3f51b5',
     },
     h3: {
       fontSize: '20px',
@@ -42,6 +42,15 @@ const lightTheme = createTheme({
       paper: '#f5f5f5',
     },        
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: '#ffffff', // Set the button text color for light theme
+        },
+      },
+    },
+  },
 });
 
 const darkTheme = createTheme({
@@ -55,7 +64,7 @@ const darkTheme = createTheme({
     h2: {
       fontSize: '30px',
       fontWeight: 600,
-      color: '#e0e0e0',
+      color: '#FFFF00',
     },
     h3: {
       fontSize: '20px',
@@ -68,16 +77,16 @@ const darkTheme = createTheme({
       color: '#e0e0e0',
     },
     h5:{
-      color:"#C147E9"
+      color:"#FFFF00"
     },
     h6:{
-      color:"#B2A4FF"
+      color:"#FFFF00"
     }
   },
   palette: {
     mode: 'dark', // Switches to dark mode
     primary: {
-      main: '#C147E9',
+      main: '#FFF',
     },
     secondary: {
       main: '#6a1b9a',
@@ -90,6 +99,15 @@ const darkTheme = createTheme({
     background: {
       default: '#121212',
       paper: '#212121',
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: '#000000', // Set the button text color for dark theme
+        },
+      },
     },
   },
 });

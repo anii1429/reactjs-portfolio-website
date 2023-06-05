@@ -28,8 +28,8 @@ const Projects = ({ currentTheme }) => {
       >
         <Grid xs={12} md={12} lg={12} item>
           <Typography
-            variant="h3"
-            sx={{ fontWeight: "bold", color: theme.palette.primary.main }}
+            variant="h2"
+            sx={{ fontWeight: "bold" }}
           >
             My Projects
           </Typography>

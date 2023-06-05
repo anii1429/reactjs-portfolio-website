@@ -75,7 +75,7 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
             </Typography>
 
             <IconButton
-              sx={{ display: { xs: "flex", md: "none", marginLeft: "80px" } }}
+              sx={{ display: { xs: "flex", md: "none" } }}
               onClick={() =>
                 setCurrentTheme(currentTheme === "light" ? "dark" : "light")
               }
