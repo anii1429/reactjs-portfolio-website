@@ -24,7 +24,7 @@ function ExperiencePage({ currentTheme }) {
         [theme.breakpoints.down("sm")]: {
           mb: 6,
         },
-        paddingBottom: "52px",
+        paddingBottom: "70px",
       }}
     >
       <Grid container direction="column" alignItems="center" spacing={4}>
@@ -51,7 +51,7 @@ function ExperiencePage({ currentTheme }) {
             <Typography
               variant="h5"
               sx={{
-                mb: 2,
+                mb: 1,
                 [theme.breakpoints.down("sm")]: {
                   mb: 1,
                 },
@@ -62,13 +62,13 @@ function ExperiencePage({ currentTheme }) {
             <Typography
               variant="h6"
               sx={{
-                mb: 4,
+                mb: 2,
                 [theme.breakpoints.down("sm")]: {
                   mb: 0,
                 },
               }}
             >
-              React JS Developer
+              Frontend Developer
             </Typography>
             {recentWork.experience.map((item, i) => (
               <Typography variant="body1" sx={{ mt: 2 }}>

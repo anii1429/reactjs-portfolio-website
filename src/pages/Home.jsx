@@ -42,7 +42,7 @@ const HomePage = ({ currentTheme }) => {
                     textShadow: "2px 2px #000",
                   }}
                 >
-                  hello.
+                  HELLO.
                 </Typography>
                 <Typography
                   variant="h2"
@@ -51,7 +51,7 @@ const HomePage = ({ currentTheme }) => {
                     fontSize: "50px",
                   }}
                 >
-                  i am anil chauhan
+                  I am anil chauhan
                 </Typography>
                 <Typography
                   variant="body2"
@@ -60,12 +60,12 @@ const HomePage = ({ currentTheme }) => {
                     fontSize: "23px",
                   }}
                 >
-                  i am react js developer with one year of experience{" "}
+                  I have significant experience working as a frontend developer.
                 </Typography>
                 <Box sx={{ padding: "20px 0" }}>
-                  <Button variant="contained">
+                  <Button variant="contained" sx={{backgroundColor:"blue"}}>
                     <a
-                      style={{ textDecoration: "none" }}
+                      style={{ textDecoration: "none",color: "white" }}
                       download="AnilChauhan_Resume.pdf"
                       href="/files/AnilChauhan_Resume.pdf"
                       className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-white font-bold duration-500"

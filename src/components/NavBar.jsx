@@ -70,10 +70,24 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
                 onMouseEnter={handleHover}
                 onMouseLeave={handleLeave}
               >
-                {isHovered ? "reactjs.dev" : "anilchauhan"}
+                {isHovered ? "frontend.dev" : "anilchauhan"}
               </Link>
             </Typography>
 
+            {/* <IconButton
+              sx={{ display: { xs: "flex", md: "none" },backgroundColor:"red" }}
+              onClick={() =>
+                setCurrentTheme(currentTheme === "light" ? "dark" : "light")
+              }
+            >
+              {currentTheme == "light" ? (
+                <DarkModeIcon style={{ color: "#121212" }} />
+              ) : (
+                <LightModeIcon style={{ color: "white" }} />
+              )}
+            </IconButton> */}
+
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" },justifyContent:"flex-end" }}>
             <IconButton
               sx={{ display: { xs: "flex", md: "none" } }}
               onClick={() =>
@@ -86,8 +100,6 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
                 <LightModeIcon style={{ color: "white" }} />
               )}
             </IconButton>
-
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"

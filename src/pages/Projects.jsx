@@ -44,7 +44,7 @@ const Projects = ({ currentTheme }) => {
         </Grid>
         {projectdata.map((value, i) => (
           <Grid key={i} xs={12} md={4} lg={4} sm={4} item>
-            <ProjectCard project={value} />
+            <ProjectCard project={value} currentTheme={currentTheme}/>
           </Grid>
         ))}
       </Grid>

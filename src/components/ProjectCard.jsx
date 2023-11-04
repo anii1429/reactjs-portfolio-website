@@ -12,7 +12,7 @@ import notes from "../data/images/todo.jpg";
 import palette from "../data/images/colors-app.avif";
 import News from "../data/images/news.avif";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project,currentTheme }) => {
   const [animatedStyle, setAnimatedStyle] = useSpring(() => ({
     opacity: 0,
     transform: "translateY(50px)",
@@ -52,7 +52,7 @@ const ProjectCard = ({ project }) => {
         <CardActions>
           {/* <Button size="small">Share</Button> */}
           <a href={project.source_code} target="_blank" rel="noopener noreferrer">
-          <Button size="small">Source Code</Button>
+          <Button sx={{color:currentTheme == "dark" ? "yellow" :"blue"}} size="small">Source Code</Button>
             </a>
         </CardActions>
       </Card>

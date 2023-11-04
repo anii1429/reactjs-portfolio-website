@@ -18,7 +18,7 @@
 }
 
 .background-text1::before {
-  content: "REACT JS";
+  content: "FRONTEND";
   position: absolute;
   top: 40px;
   left: 15px;
