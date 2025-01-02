@@ -1,22 +1,22 @@
 [
     {
-        "skill":"HTML",
-        "level":80
+        "skill": "Javascript",
+        "level": 90
     },
     {
-        "skill":"CSS",
-        "level":70
+        "skill": "TypeScript",
+        "level": 80
     },
     {
-        "skill":"Javascript",
-        "level":90
+        "skill": "React Js",
+        "level": 90
     },
     {
-        "skill":"React Js",
-        "level":90
+        "skill": "React Native",
+        "level": 70
     },
     {
-        "skill":"React Native",
-        "level":70
+        "skill": "MUI",
+        "level": 75
     }
 ]

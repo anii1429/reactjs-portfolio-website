@@ -11,9 +11,11 @@ const Projects = ({ currentTheme }) => {
     <Box
       sx={{
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        padding: "6px 10px",
+        minHeight: "80vh",
+        padding: "0px 10px",
         [theme.breakpoints.down("sm")]: {
           padding: "0 30px 100px 30px",
         },
@@ -21,30 +23,33 @@ const Projects = ({ currentTheme }) => {
     >
       <Grid
         container
-        spacing={2}
+        spacing={4}
         justifyContent="center"
         alignItems="center"
         sx={{ textAlign: "center" }}
       >
-        <Grid xs={12} md={12} lg={12} item>
-          <Typography
-            variant="h2"
-            sx={{ fontWeight: "bold" }}
-          >
+         <Grid xs={12} item>
+          <Typography variant="h2" sx={{ fontWeight: "bold" }}> {/* Adjusted font size */}
             My Projects
           </Typography>
           <Typography
-            variant="subtitle1"
+            variant="body1" // Adjusted to smaller text size
             color="text.secondary"
             sx={{ fontWeight: "bold" }}
           >
-            Check out some of my recent work and see what I've been up to
-            lately.
+            Check out some of my recent work and see what I've been up to lately.
+          </Typography>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ marginTop: "8px" }}
+          >
+            These are my personal projects created for learning and growth.
           </Typography>
         </Grid>
         {projectdata.map((value, i) => (
-          <Grid key={i} xs={12} md={4} lg={4} sm={4} item>
-            <ProjectCard project={value} currentTheme={currentTheme}/>
+          <Grid key={i} xs={12} sm={6} md={4} lg={3} item>
+            <ProjectCard project={value} currentTheme={currentTheme} />
           </Grid>
         ))}
       </Grid>

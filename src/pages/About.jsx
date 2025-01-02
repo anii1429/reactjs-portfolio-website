@@ -5,7 +5,6 @@ import SkillsComponent from "../components/SkillsComponent";
 import Footer from "../components/Footer";
 import Education from "../components/Education";
 import myPhoto from "../Assets/aboutImage.jpg";
-import LanguageChart from "../components/LanguageChart";
 import RadialChart from "../components/LanguageChart";
 
 const aboutMe = require("../data/aboutme.json");

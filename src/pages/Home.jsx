@@ -8,9 +8,7 @@ const HomePage = ({ currentTheme }) => {
   const theme = useTheme();
   return (
     <Fragment>
-      <main
-        className="background-text1 home-main"
-      >
+      <main className="background-text1 home-main">
         <Container className="background-text2">
           <Grid2
             container
@@ -18,7 +16,7 @@ const HomePage = ({ currentTheme }) => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              padding: { xs: "0", md: "40px 0" },
+              padding: { xs: "20px", md: "40px" },
             }}
           >
             <Grid2
@@ -31,6 +29,7 @@ const HomePage = ({ currentTheme }) => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                textAlign: "center",
               }}
             >
               <Box sx={{ padding: "40px 0" }}>
@@ -38,8 +37,9 @@ const HomePage = ({ currentTheme }) => {
                   variant="h1"
                   sx={{
                     color: "yellow",
-                    fontSize: "100px",
+                    fontSize: { xs: "50px", md: "100px" },
                     textShadow: "2px 2px #000",
+                    marginBottom: "20px",
                   }}
                 >
                   HELLO.
@@ -48,32 +48,42 @@ const HomePage = ({ currentTheme }) => {
                   variant="h2"
                   sx={{
                     color: currentTheme === "light" ? "#121212" : "white",
-                    fontSize: "50px",
+                    fontSize: { xs: "30px", md: "50px" },
+                    marginBottom: "10px",
                   }}
                 >
-                  I am anil chauhan
+                  I am Anil Chauhan
                 </Typography>
                 <Typography
                   variant="body2"
                   sx={{
                     color: currentTheme === "light" ? "#121212" : "white",
-                    fontSize: "23px",
+                    fontSize: { xs: "16px", md: "23px" },
+                    marginBottom: "20px",
                   }}
                 >
-                  I have significant experience working as a frontend developer.
+                  I specialize in creating high-performance web applications with React.js, focusing on delivering responsive, user-friendly interfaces. I thrive on solving complex problems and building solutions that enhance user experience and drive business success.
                 </Typography>
+
                 <Box sx={{ padding: "20px 0" }}>
-                  <Button variant="contained" sx={{backgroundColor:"blue"}}>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      backgroundColor: "blue",
+                      padding: "10px 20px",
+                      fontSize: "16px",
+                      fontWeight: "bold",
+                      "&:hover": {
+                        backgroundColor: "darkblue",
+                      },
+                    }}
+                  >
                     <a
-                      style={{ textDecoration: "none",color: "white" }}
+                      style={{ textDecoration: "none", color: "white" }}
                       download="AnilChauhan_Resume.pdf"
                       href="/files/AnilChauhan_Resume.pdf"
-                      className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-white font-bold duration-500"
-                      aria-label="Download Resume"
                     >
-                      <span className="text-sm sm:text-lg font-general-medium duration-100">
-                        Download CV
-                      </span>
+                      Download CV
                     </a>
                   </Button>
                 </Box>

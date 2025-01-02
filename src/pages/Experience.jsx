@@ -18,7 +18,7 @@ function ExperiencePage({ currentTheme }) {
     <Box
       sx={{
         display: "flex",
-        justifyContent: "center",
+        flexDirection: "column",
         alignItems: "center",
         overflow: "hidden",
         [theme.breakpoints.down("sm")]: {
@@ -28,55 +28,78 @@ function ExperiencePage({ currentTheme }) {
       }}
     >
       <Grid container direction="column" alignItems="center" spacing={4}>
+        {/* Experience Section */}
         <Grid item>
-          <Typography
-            variant="h2"
-            sx={{ fontWeight: "bold" }}
-          >
+          <Typography variant="h2" sx={{ fontWeight: "bold" }}>
             My Experience
           </Typography>
         </Grid>
-        <Grid item xs={12} md={8} lg={6}>
-          <Paper
-            sx={{
-              padding: isMobile ? "1rem 1rem 5rem 1rem" : "2rem", // Adjusted padding for mobile devices
-              margin: "0 20px",
-              textAlign: "left",
-              [theme.breakpoints.down("sm")]: {
-                margin: "0 20px 40px",
-              },
-              boxShadow: "0px 3px 10px rgba(0, 0, 0, 0.2)",
-            }}
-          >
-            <Typography
-              variant="h5"
+        {recentWork.experience.map((experience, index) => (
+          <Grid item xs={12} md={8} lg={6} key={index}>
+            <Paper
               sx={{
-                mb: 1,
+                padding: isMobile ? "1rem 1rem 5rem 1rem" : "2rem",
+                margin: "0 20px",
+                textAlign: "left",
                 [theme.breakpoints.down("sm")]: {
-                  mb: 1,
+                  margin: "0 20px 40px",
                 },
+                boxShadow: "0px 3px 10px rgba(0, 0, 0, 0.2)",
               }}
             >
-              Technotery
-            </Typography>
-            <Typography
-              variant="h6"
-              sx={{
-                mb: 2,
-                [theme.breakpoints.down("sm")]: {
-                  mb: 0,
-                },
-              }}
-            >
-              Frontend Developer
-            </Typography>
-            {recentWork.experience.map((item, i) => (
-              <Typography variant="body1" sx={{ mt: 2 }}>
-                {item}
+              <Typography variant="h5" sx={{ mb: 1 }}>
+                {experience.company}
               </Typography>
-            ))}
-          </Paper>
+              <Typography variant="h6" sx={{ mb: 0.5 }}>
+                {experience.role}
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                color="textSecondary"
+                sx={{ mb: 2 }}
+              >
+                {experience.duration}
+              </Typography>
+              {experience.details.map((detail, i) => (
+                <Typography key={i} variant="body1" sx={{ mt: 1 }}>
+                  • {detail}
+                </Typography>
+              ))}
+            </Paper>
+          </Grid>
+        ))}
+
+        {/* Recent Projects Section */}
+        <Grid item>
+          <Typography variant="h2" sx={{ fontWeight: "bold", mt: 4 }}>
+            Recent Work
+          </Typography>
         </Grid>
+        {recentWork["recent-projects"].map((project, index) => (
+          <Grid item xs={12} md={8} lg={6} key={index}>
+            <Paper
+              sx={{
+                padding: isMobile ? "1rem 1rem 5rem 1rem" : "2rem",
+                margin: "0 20px",
+                textAlign: "left",
+                [theme.breakpoints.down("sm")]: {
+                  margin: "0 20px 40px",
+                },
+                boxShadow: "0px 3px 10px rgba(0, 0, 0, 0.2)",
+              }}
+            >
+              <Typography variant="h5" sx={{ mb: 1 }}>
+                {project.title}
+              </Typography>
+              <Typography variant="body1" sx={{ mb: 1 }}>
+                {project.description}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                Technologies Used: {project.technologies}
+              </Typography>
+            </Paper>
+          </Grid>
+        ))}
       </Grid>
       <Footer currentTheme={currentTheme} />
     </Box>
