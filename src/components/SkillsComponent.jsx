@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, LinearProgress, useTheme } from "@mui/material";
+import { Box, Typography, LinearProgress } from "@mui/material";
 
 const SkillsComponent = (props) => {
   return (

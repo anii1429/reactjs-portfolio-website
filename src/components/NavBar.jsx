@@ -74,19 +74,6 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
               </Link>
             </Typography>
 
-            {/* <IconButton
-              sx={{ display: { xs: "flex", md: "none" },backgroundColor:"red" }}
-              onClick={() =>
-                setCurrentTheme(currentTheme === "light" ? "dark" : "light")
-              }
-            >
-              {currentTheme == "light" ? (
-                <DarkModeIcon style={{ color: "#121212" }} />
-              ) : (
-                <LightModeIcon style={{ color: "white" }} />
-              )}
-            </IconButton> */}
-
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" },justifyContent:"flex-end" }}>
             <IconButton
               sx={{ display: { xs: "flex", md: "none" } }}
@@ -94,7 +81,7 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
                 setCurrentTheme(currentTheme === "light" ? "dark" : "light")
               }
             >
-              {currentTheme == "light" ? (
+              {currentTheme === "light" ? (
                 <DarkModeIcon style={{ color: "#121212" }} />
               ) : (
                 <LightModeIcon style={{ color: "white" }} />
@@ -161,7 +148,7 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
                   setCurrentTheme(currentTheme === "light" ? "dark" : "light")
                 }
               >
-                {currentTheme == "light" ? (
+                {currentTheme === "light" ? (
                   <DarkModeIcon style={{ color: "#121212" }} />
                 ) : (
                   <LightModeIcon style={{ color: "white" }} />

@@ -29,7 +29,7 @@ const AboutMe = ({ currentTheme }) => {
               <img
                 className=""
                 src={myPhoto}
-                alt="my photo"
+                alt="user"
                 style={{
                   maxWidth: "80%",
                   maxHeight: "100%",

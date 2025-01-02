@@ -1,11 +1,10 @@
-import { Box, Button, Container, Typography, useTheme } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import React, { Fragment } from "react";
 import ".././style.css";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Footer from "../components/Footer";
 
 const HomePage = ({ currentTheme }) => {
-  const theme = useTheme();
   return (
     <Fragment>
       <main className="background-text1 home-main">

@@ -1,6 +1,5 @@
 import React from "react";
 import { useSpring, animated } from "@react-spring/web";
-import { createTheme } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -12,7 +11,7 @@ import notes from "../data/images/todo.jpg";
 import palette from "../data/images/colors-app.avif";
 import News from "../data/images/news.avif";
 
-const ProjectCard = ({ project,currentTheme }) => {
+const ProjectCard = ({ project, currentTheme }) => {
   const [animatedStyle, setAnimatedStyle] = useSpring(() => ({
     opacity: 0,
     transform: "translateY(50px)",
@@ -36,8 +35,8 @@ const ProjectCard = ({ project,currentTheme }) => {
             project.img === "palette"
               ? palette
               : project.img === "News"
-              ? News
-              : notes
+                ? News
+                : notes
           }
           title="green iguana"
         />
@@ -52,8 +51,8 @@ const ProjectCard = ({ project,currentTheme }) => {
         <CardActions>
           {/* <Button size="small">Share</Button> */}
           <a href={project.source_code} target="_blank" rel="noopener noreferrer">
-          <Button sx={{color:currentTheme == "dark" ? "yellow" :"blue"}} size="small">Source Code</Button>
-            </a>
+            <Button sx={{ color: currentTheme === "dark" ? "yellow" : "blue" }} size="small">Source Code</Button>
+          </a>
         </CardActions>
       </Card>
     </animated.div>
