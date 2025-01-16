@@ -7,6 +7,8 @@ import ExperiencePage from './pages/Experience';
 import { ThemeProvider } from '@mui/material';
 import { lightTheme, darkTheme } from './theme/theme';
 import { useEffect, useState } from 'react';
+import ServicesPage from './pages/Services';
+import ContactPage from './pages/ContactMe';
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState("light")
@@ -26,6 +28,8 @@ function App() {
           <Route path="/about" element={<AboutMe currentTheme={currentTheme} />} />
           <Route path="/projects" element={<Projects currentTheme={currentTheme} />} />
           <Route path="/experience" element={<ExperiencePage currentTheme={currentTheme} />} />
+          <Route path="/services" element={<ServicesPage currentTheme={currentTheme} />} />
+          <Route path="/contact" element={<ContactPage currentTheme={currentTheme} />} />
         </Routes>
       </ThemeProvider>
     </>

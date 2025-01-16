@@ -13,7 +13,7 @@ import { Link, useLocation } from "react-router-dom";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
-const pages = ["About", "experience", "Projects"];
+const pages = ["About", "experience", "Projects", "Services", "Contact"];
 
 const NavBar = ({ setCurrentTheme, currentTheme }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

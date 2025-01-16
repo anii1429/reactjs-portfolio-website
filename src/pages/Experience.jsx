@@ -6,9 +6,11 @@ import {
   Box,
   useTheme,
   useMediaQuery,
+  IconButton,
 } from "@mui/material";
 import Footer from "../components/Footer";
-const recentWork = require("../data/recentWork.json");
+import recentWork from "../data/recentWork"; // Now importing from JS file
+// import { AccessAlarm, Event, Business, Settings, LocalHospital } from "@mui/icons-material";
 
 function ExperiencePage({ currentTheme }) {
   const theme = useTheme();
@@ -75,31 +77,34 @@ function ExperiencePage({ currentTheme }) {
             Recent Work
           </Typography>
         </Grid>
-        {recentWork["recent-projects"].map((project, index) => (
-          <Grid item xs={12} md={8} lg={6} key={index}>
-            <Paper
-              sx={{
-                padding: isMobile ? "1rem 1rem 5rem 1rem" : "2rem",
-                margin: "0 20px",
-                textAlign: "left",
-                [theme.breakpoints.down("sm")]: {
-                  margin: "0 20px 40px",
-                },
-                boxShadow: "0px 3px 10px rgba(0, 0, 0, 0.2)",
-              }}
-            >
-              <Typography variant="h5" sx={{ mb: 1 }}>
-                {project.title}
-              </Typography>
-              <Typography variant="body1" sx={{ mb: 1 }}>
-                {project.description}
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                Technologies Used: {project.technologies}
-              </Typography>
-            </Paper>
-          </Grid>
-        ))}
+        {recentWork["recent-projects"].map((project, index) => {
+          return (
+            <Grid item xs={12} md={8} lg={6} key={index}>
+              <Paper
+                sx={{
+                  padding: isMobile ? "1rem 1rem 5rem 1rem" : "2rem",
+                  margin: "0 20px",
+                  textAlign: "left",
+                  [theme.breakpoints.down("sm")]: {
+                    margin: "0 20px 40px",
+                  },
+                  boxShadow: "0px 3px 10px rgba(0, 0, 0, 0.2)",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+                  <IconButton>{project.icon}</IconButton>
+                  <Typography variant="h5">{project.title}</Typography>
+                </Box>
+                <Typography variant="body1" sx={{ mb: 1 }}>
+                  {project.description}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  Technologies Used: {project.technologies}
+                </Typography>
+              </Paper>
+            </Grid>
+          );
+        })}
       </Grid>
       <Footer currentTheme={currentTheme} />
     </Box>
