@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Typography, Card, CardContent, Button, Box, useTheme, useMediaQuery } from '@mui/material';
+import { Container, Grid, Typography, Card, CardContent, Button, Box, useTheme } from '@mui/material';
 import WebIcon from '@mui/icons-material/Web';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
