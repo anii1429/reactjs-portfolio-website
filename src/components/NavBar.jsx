@@ -74,19 +74,19 @@ const NavBar = ({ setCurrentTheme, currentTheme }) => {
               </Link>
             </Typography>
 
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" },justifyContent:"flex-end" }}>
-            <IconButton
-              sx={{ display: { xs: "flex", md: "none" } }}
-              onClick={() =>
-                setCurrentTheme(currentTheme === "light" ? "dark" : "light")
-              }
-            >
-              {currentTheme === "light" ? (
-                <DarkModeIcon style={{ color: "#121212" }} />
-              ) : (
-                <LightModeIcon style={{ color: "white" }} />
-              )}
-            </IconButton>
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }, justifyContent: "flex-end" }}>
+              <IconButton
+                sx={{ display: { xs: "flex", md: "none" } }}
+                onClick={() =>
+                  setCurrentTheme(currentTheme === "light" ? "dark" : "light")
+                }
+              >
+                {currentTheme === "light" ? (
+                  <DarkModeIcon style={{ color: "#121212" }} />
+                ) : (
+                  <LightModeIcon style={{ color: "white" }} />
+                )}
+              </IconButton>
               <IconButton
                 size="large"
                 aria-label="account of current user"

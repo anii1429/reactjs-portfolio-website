@@ -31,7 +31,6 @@ const services = [
 
 const ServicesPage = ({ currentTheme }) => {
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <Box
